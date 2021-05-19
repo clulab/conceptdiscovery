@@ -87,7 +87,7 @@ class TestConceptDiscoverer extends FlatSpec with Matchers {
     val allRankedConcepts = conceptDiscovery.rankConcepts(conceptDiscovery.discoverConcepts(urlDocuments))
     allRankedConcepts.map(_.concept.phrase) should be (Seq("Mr.google"))
   }
-å
+  
   conceptDiscovery.rankConcepts(concepts)
 
 }
