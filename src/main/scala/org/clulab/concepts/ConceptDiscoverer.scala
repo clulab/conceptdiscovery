@@ -9,6 +9,7 @@ import org.clulab.processors.Processor
 import org.clulab.processors.clu.CluProcessor
 import org.jgrapht.graph._
 import org.jgrapht.alg.scoring.PageRank
+import com.github.jelmerk.knn.scalalike.SearchResult
 
 import scala.collection.mutable
 
@@ -116,7 +117,7 @@ class ConceptDiscoverer(
    *                            be included in the initial graph to be ranked
    * @return
    */
-  def rankConcepts(concepts: Seq[Concept], similarityThreshold: Double): Seq[ScoredConcept] = {
+  def rankConcepts(concepts: Seq[Concept], similarityThreshold: Double = 0.0, topK: Int = 100): Seq[ScoredConcept] = {
 
     // construct graph from concepts
     val g = new SimpleWeightedGraph[String, DefaultEdge](classOf[DefaultEdge])
@@ -124,11 +125,22 @@ class ConceptDiscoverer(
       // add (internally library handles not adding if already there)
       g.addVertex(concept.phrase)
     }
-    for (List(c1, c2) <- concepts.combinations(2)) {
-      val weight = wordEmbeddings.avgSimilarity(c1.phrase.split(' '), c2.phrase.split(' '))
-      if (weight > similarityThreshold && !g.containsEdge(c1.phrase, c2.phrase)) {
-        val e = g.addEdge(c1.phrase, c2.phrase)
-        g.setEdgeWeight(e, weight)
+//    for (List(c1, c2) <- concepts.combinations(2)) {
+//      val weight = wordEmbeddings.avgSimilarity(c1.phrase.split(' '), c2.phrase.split(' '))
+//      if (weight > similarityThreshold && !g.containsEdge(c1.phrase, c2.phrase)) {
+//        val e = g.addEdge(c1.phrase, c2.phrase)
+//        g.setEdgeWeight(e, weight)
+//      }
+//    }
+    // build index
+    val index = buildIndex(concepts)
+    // build graph
+    buildIndex(concepts).foreach{ c1 =>
+      index.findNeighbors(c1.id, topK).foreach{case SearchResult(c2, distance) =>
+        if (distance > similarityThreshold && !g.containsEdge(c1.id.nodeName, c2.id.nodeName)){
+          val e = g.addEdge(c1.id.nodeName, c2.id.nodeName)
+          g.setEdgeWeight(e, distance)
+        }
       }
     }
 
@@ -138,6 +150,26 @@ class ConceptDiscoverer(
       .map(c => ScoredConcept(c, pr.getVertexScore(c.phrase)))
       // and return them in order of saliency (highest first)
       .sortBy(-_.saliency)
+  }
+  def readFlatOntologyItems(concepts: Seq[Concept]): Seq[FlatOntologyAlignmentItem] = {
+    val namespace = "wm_flattened"
+
+    val items: Seq[FlatOntologyAlignmentItem] = concepts.map { concept =>
+      val name = concept.phrase
+      val embedding = wordEmbeddings.makeCompositeVector(name.split(' '))
+      val identifier = FlatOntologyIdentifier(namespace, name)
+
+      FlatOntologyAlignmentItem(identifier, embedding)
+    }
+
+    items
+  }
+
+  def buildIndex(concepts: Seq[Concept]): FlatOntologyIndex.Index = {
+    val items = readFlatOntologyItems(concepts)
+    val index = FlatOntologyIndex.newIndex(items)
+
+    index
   }
 
 

@@ -84,8 +84,10 @@ class TestConceptDiscoverer extends FlatSpec with Matchers {
       // all sentences have equal score
       DiscoveryDocument(s"doc$i", scoredSentences)
     }
-    val allRankedConcepts = conceptDiscovery.rankConcepts(conceptDiscovery.discoverConcepts(urlDocuments), 0.0)
+    val allRankedConcepts = conceptDiscovery.rankConcepts(conceptDiscovery.discoverConcepts(urlDocuments))
     allRankedConcepts.map(_.concept.phrase) should be (Seq("Mr.google"))
   }
+å
+  conceptDiscovery.rankConcepts(concepts)
 
 }
