@@ -68,13 +68,13 @@ class ConceptDiscoverer(
     // concept occurred in the corpus.
     val conceptLocations = mutable.Map.empty[String, Set[DocumentLocation]]
       .withDefaultValue(Set.empty)
-    documents.zipWithIndex foreach { case (originalDoc, doc_i) =>
-      println(s"doc$doc_i being processed")
+
+    for (originalDoc <- documents) {
+      println(s"doc ${originalDoc.docid} is being processed")
       val sentences = originalDoc.sentences
       val sentenceThreshold = proportionSentencesKeep.flatMap(prop => findThreshold(sentences, prop))
 
       sentences.zipWithIndex foreach { case (sentence, i) =>
-        println(s"sentence$i being processed")
         // see of the sentence's score is > threshold (else, if not using threshold)
         if (keepSentence(sentence, sentenceThreshold)) {
           // annotate this sentence
@@ -87,23 +87,6 @@ class ConceptDiscoverer(
         }
       }
     }
-//    for (originalDoc <- documents) {
-//      val sentences = originalDoc.sentences
-//      val sentenceThreshold = proportionSentencesKeep.flatMap(prop => findThreshold(sentences, prop))
-//
-//      sentences.zipWithIndex foreach { case (sentence, i) =>
-//        // see of the sentence's score is > threshold (else, if not using threshold)
-//        if (keepSentence(sentence, sentenceThreshold)) {
-//          // annotate this sentence
-//          val localDoc = processor.annotate(sentence.text)
-//          // find and collect concept mentions
-//          val mentions = entityFinder.extractAndFilter(localDoc)
-//          for (mention <- mentions) {
-//            conceptLocations(mention.text) += DocumentLocation(originalDoc.docid, i)
-//          }
-//        }
-//      }
-//    }
 
     conceptLocations.map{
       case (phrase, locations) => Concept(phrase, locations)
