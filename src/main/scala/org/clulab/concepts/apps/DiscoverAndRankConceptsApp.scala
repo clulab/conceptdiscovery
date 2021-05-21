@@ -16,7 +16,7 @@ object DiscoverAndRankConceptsApp extends App {
   val sentenceThresholdOpt = args.lift(4).map(_.toDouble)
 
   val conceptDiscovery = ConceptDiscoverer.fromConfig()
-  val files = FileUtils.findFiles(inputDir, "json").take(10)
+  val files = FileUtils.findFiles(inputDir, "json")
   val discoveryDocuments = files.flatMap { file =>
     val conceptSource = ConceptSource(file)
     val docId = conceptSource.getIdOpt.get
