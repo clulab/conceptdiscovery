@@ -13,6 +13,7 @@ import com.github.jelmerk.knn.scalalike.SearchResult
 import java.util.Calendar
 import java.util.concurrent.TimeUnit
 import scala.collection.mutable
+import java.io.{FileOutputStream, PrintStream}
 
 class ConceptDiscoverer(
    processor: Processor,
@@ -94,6 +95,31 @@ class ConceptDiscoverer(
       count += 1
     }
 
+    conceptLocations.map{
+      case (phrase, locations) => Concept(phrase, locations)
+    }.toVector
+  }
+
+  def saveConcepts(concepts: Vector[Concept], saved_loc: String): Unit={
+    Console.withOut(new PrintStream(new FileOutputStream(saved_loc))) {
+      concepts.foreach { concept =>
+        val phrase = concept.phrase
+        val locations = concept.documentLocations
+        locations.foreach{loc =>
+          println(phrase+'\t'+loc.docid+' '+loc.sent.toString)
+        }
+      }
+    }
+  }
+
+  def loadConcepts(file_loc: String): Vector[Concept]={
+    val conceptLocations = mutable.Map.empty[String, Set[DocumentLocation]]
+      .withDefaultValue(Set.empty)
+    scala.io.Source.fromFile(file_loc).getLines().foreach{line =>
+      val phrase = line.stripLineEnd.split('\t')(0)
+      val locations = line.stripLineEnd.split('\t')(1)
+      conceptLocations(phrase) += DocumentLocation(locations.split(' ')(0), locations.split(' ')(1).toInt)
+    }
     conceptLocations.map{
       case (phrase, locations) => Concept(phrase, locations)
     }.toVector
