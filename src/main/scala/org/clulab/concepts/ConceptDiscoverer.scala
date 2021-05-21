@@ -89,7 +89,7 @@ class ConceptDiscoverer(
         }
       }
       val time = Calendar.getInstance
-      println(s"Finished in $TimeUnit.MILLISECONDS.toSeconds(time.getTimeInMillis() - start.getTimeInMillis()) seconds, we already processed $count docs now.")
+      println(s"Finished in ${TimeUnit.MILLISECONDS.toSeconds(time.getTimeInMillis() - start.getTimeInMillis())} seconds, we already processed $count docs now.")
       start = Calendar.getInstance
       count += 1
     }
