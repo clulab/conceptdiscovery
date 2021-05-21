@@ -9,11 +9,11 @@ import java.io.{FileOutputStream, PrintStream}
 object DiscoverAndRankConceptsApp extends App {
   val start = Calendar.getInstance
   val inputDir = args(0)
-  val thresholdFrequency = args(1).toDouble
-  val thresholdSimilarity = args(2).toDouble
-  val topPick = args(3).toInt
+  val thresholdFrequency = 10
+  val thresholdSimilarity = 0
+  val topPick = 10000
   // This goes last, even though not used last, because it is optional.
-  val sentenceThresholdOpt = args.lift(4).map(_.toDouble)
+  val sentenceThresholdOpt = None
 
   val conceptDiscovery = ConceptDiscoverer.fromConfig()
   val files = FileUtils.findFiles(inputDir, "json")
