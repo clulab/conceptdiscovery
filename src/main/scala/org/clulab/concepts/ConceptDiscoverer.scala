@@ -70,6 +70,7 @@ class ConceptDiscoverer(
     val conceptLocations = mutable.Map.empty[String, Set[DocumentLocation]]
       .withDefaultValue(Set.empty)
     var start = Calendar.getInstance
+    var count = 1
     for (originalDoc <- documents) {
       println(s"doc ${originalDoc.docid} is being processed")
       val sentences = originalDoc.sentences
@@ -88,8 +89,9 @@ class ConceptDiscoverer(
         }
       }
       val time = Calendar.getInstance
-      println(TimeUnit.MILLISECONDS.toSeconds(time.getTimeInMillis() - start.getTimeInMillis()))
+      println(s"Finished in $TimeUnit.MILLISECONDS.toSeconds(time.getTimeInMillis() - start.getTimeInMillis()) seconds, we already processed $count docs now.")
       start = Calendar.getInstance
+      count += 1
     }
 
     conceptLocations.map{
