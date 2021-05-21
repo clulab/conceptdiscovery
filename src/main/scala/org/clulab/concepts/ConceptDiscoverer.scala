@@ -10,7 +10,8 @@ import org.clulab.processors.clu.CluProcessor
 import org.jgrapht.graph._
 import org.jgrapht.alg.scoring.PageRank
 import com.github.jelmerk.knn.scalalike.SearchResult
-
+import java.util.Calendar
+import java.util.concurrent.TimeUnit
 import scala.collection.mutable
 
 class ConceptDiscoverer(
@@ -68,7 +69,7 @@ class ConceptDiscoverer(
     // concept occurred in the corpus.
     val conceptLocations = mutable.Map.empty[String, Set[DocumentLocation]]
       .withDefaultValue(Set.empty)
-
+    var start = Calendar.getInstance
     for (originalDoc <- documents) {
       println(s"doc ${originalDoc.docid} is being processed")
       val sentences = originalDoc.sentences
@@ -86,6 +87,9 @@ class ConceptDiscoverer(
           }
         }
       }
+      val time = Calendar.getInstance
+      println(TimeUnit.MILLISECONDS.toSeconds(time.getTimeInMillis() - start.getTimeInMillis()))
+      start = Calendar.getInstance
     }
 
     conceptLocations.map{
