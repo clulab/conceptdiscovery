@@ -10,7 +10,9 @@ import org.clulab.processors.clu.CluProcessor
 import org.jgrapht.graph._
 import org.jgrapht.alg.scoring.PageRank
 import com.github.jelmerk.knn.scalalike.SearchResult
+
 import java.util.Calendar
+import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.TimeUnit
 import scala.collection.mutable
 
@@ -20,8 +22,6 @@ class ConceptDiscoverer(
    stopManager: StopWordManager,
    wordEmbeddings: CompactWordEmbeddingMap
  ) {
-
-  Utils.initializeDyNet()
 
   /**
    * Discover concepts using the entity finder, keep track of where they were found,
@@ -69,29 +69,30 @@ class ConceptDiscoverer(
     // concept occurred in the corpus.
     val conceptLocations = mutable.Map.empty[String, Set[DocumentLocation]]
       .withDefaultValue(Set.empty)
-    var start = Calendar.getInstance
-    var count = 1
-    for (originalDoc <- documents) {
-      println(s"doc ${originalDoc.docid} is being processed")
+
+    documents.zipWithIndex.foreach { case (originalDoc, docIndex) =>
+      println(s"$docIndex doc ${originalDoc.docid} is being processed")
+      val start = Calendar.getInstance
       val sentences = originalDoc.sentences
       val sentenceThreshold = proportionSentencesKeep.flatMap(prop => findThreshold(sentences, prop))
 
-      sentences.zipWithIndex foreach { case (sentence, i) =>
+      sentences.zipWithIndex.par.foreach { case (sentence, sentIndex) =>
+        println(s"$docIndex $sentIndex")
         // see of the sentence's score is > threshold (else, if not using threshold)
         if (keepSentence(sentence, sentenceThreshold)) {
           // annotate this sentence
           val localDoc = processor.annotate(sentence.text)
           // find and collect concept mentions
           val mentions = entityFinder.extractAndFilter(localDoc)
-          for (mention <- mentions) {
-            conceptLocations(mention.text) += DocumentLocation(originalDoc.docid, i)
+          if (mentions.nonEmpty) conceptLocations.synchronized {
+            for (mention <- mentions) {
+              conceptLocations(mention.text) += DocumentLocation(originalDoc.docid, sentIndex)
+            }
           }
         }
       }
       val time = Calendar.getInstance
-      println(s"Finished in ${TimeUnit.MILLISECONDS.toSeconds(time.getTimeInMillis() - start.getTimeInMillis())} seconds, we already processed $count docs now.")
-      start = Calendar.getInstance
-      count += 1
+      println(s"Finished in ${TimeUnit.MILLISECONDS.toSeconds(time.getTimeInMillis() - start.getTimeInMillis())} seconds, we already processed ${docIndex + 1} docs now.")
     }
 
     conceptLocations.map{
@@ -184,7 +185,10 @@ class ConceptDiscoverer(
 
 object ConceptDiscoverer {
   def fromConfig(config: Config = ConfigFactory.load()): ConceptDiscoverer = {
+    Utils.initializeDyNet()
     val processor = new CluProcessor()
+    // Without this priming, the processor will hand.
+    processor.annotate("Once upon a time there were three bears.")
     val entityFinder = CustomizableRuleBasedFinder.fromConfig(
       config.withValue(
         "CustomRuleBasedEntityFinder.maxHops",
