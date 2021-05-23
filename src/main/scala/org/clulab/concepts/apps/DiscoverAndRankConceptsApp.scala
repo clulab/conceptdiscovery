@@ -31,6 +31,7 @@ object DiscoverAndRankConceptsApp extends App {
   val time = Calendar.getInstance
   println(TimeUnit.MILLISECONDS.toSeconds(time.getTimeInMillis() - start.getTimeInMillis()))
   val concepts = conceptDiscovery.discoverMostFrequentConcepts(discoveryDocuments, sentenceThresholdOpt, thresholdFrequency, topPick)
+  conceptDiscovery.saveConcepts(concepts, "concepts.txt")
   val time2 = Calendar.getInstance
   println(TimeUnit.MILLISECONDS.toSeconds(time2.getTimeInMillis() - time.getTimeInMillis()))
   println(concepts.size)
