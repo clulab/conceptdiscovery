@@ -75,7 +75,7 @@ class ConceptDiscoverer(
       val sentenceThreshold = proportionSentencesKeep.flatMap(prop => findThreshold(sentences, prop))
 
       sentences.zipWithIndex.par.foreach { case (sentence, sentIndex) =>
-        println(s"$docIndex $sentIndex")
+//        println(s"$docIndex $sentIndex")
         // see of the sentence's score is > threshold (else, if not using threshold)
         if (keepSentence(sentence, sentenceThreshold)) {
           // annotate this sentence
