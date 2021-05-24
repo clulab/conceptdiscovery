@@ -5,25 +5,22 @@ import org.clulab.dynet.Utils
 import org.clulab.embeddings.{CompactWordEmbeddingMap, WordEmbeddingMapPool}
 import org.clulab.openie.entities.{CustomizableRuleBasedFinder, RuleBasedEntityFinder}
 import org.clulab.openie.filtering.StopWordManager
-import org.clulab.processors.Processor
-import org.clulab.processors.clu.CluProcessor
+import org.clulab.processors.fastnlp.FastNLPProcessor
 import org.jgrapht.graph._
 import org.jgrapht.alg.scoring.PageRank
 import com.github.jelmerk.knn.scalalike.SearchResult
 
 import java.util.Calendar
-import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.TimeUnit
 import scala.collection.mutable
 import java.io.{FileOutputStream, PrintStream}
 
 class ConceptDiscoverer(
-   processor: Processor,
+   annotator: Annotator,
    entityFinder: RuleBasedEntityFinder,
    stopManager: StopWordManager,
    wordEmbeddings: CompactWordEmbeddingMap
  ) {
-
   /**
    * Discover concepts using the entity finder, keep track of where they were found,
    * and return the top K most frequent.  If a proportionSentencesKeep is provided,
@@ -82,7 +79,7 @@ class ConceptDiscoverer(
         // see of the sentence's score is > threshold (else, if not using threshold)
         if (keepSentence(sentence, sentenceThreshold)) {
           // annotate this sentence
-          val localDoc = processor.annotate(sentence.text)
+          val localDoc = annotator.annotate(sentence.text)
           // find and collect concept mentions
           val mentions = entityFinder.extractAndFilter(localDoc)
           if (mentions.nonEmpty) conceptLocations.synchronized {
@@ -206,15 +203,15 @@ class ConceptDiscoverer(
     index
   }
 
-
 }
 
 object ConceptDiscoverer {
   def fromConfig(config: Config = ConfigFactory.load()): ConceptDiscoverer = {
     Utils.initializeDyNet()
-    val processor = new CluProcessor()
+    val processor = new FastNLPProcessor()
+    val annotator = new Annotator(processor)
     // Without this priming, the processor will hand.
-    processor.annotate("Once upon a time there were three bears.")
+    annotator.annotate("Once upon a time there were three bears.")
     val entityFinder = CustomizableRuleBasedFinder.fromConfig(
       config.withValue(
         "CustomRuleBasedEntityFinder.maxHops",
@@ -227,6 +224,6 @@ object ConceptDiscoverer {
       .getOrElseCreate(embed_file_path, compact = true)
       .asInstanceOf[CompactWordEmbeddingMap]
 
-    new ConceptDiscoverer(processor, entityFinder, stopManager, wordEmbeddings)
+    new ConceptDiscoverer(annotator, entityFinder, stopManager, wordEmbeddings)
   }
 }
