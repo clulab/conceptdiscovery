@@ -8,7 +8,7 @@ resolvers ++= Seq(
   "jitpack" at "https://jitpack.io" // com.github.WorldModelers/Ontologies, com.github.jelmerk
 )
 libraryDependencies ++= {
-  val procVer = "8.3.3"
+  val procVer = "8.3.4"
 
   Seq(
     "org.clulab"    %% "processors-main"          % procVer,
