@@ -14,6 +14,7 @@ libraryDependencies ++= {
     "org.clulab"    %% "processors-main"          % procVer,
     "org.clulab"    %% "processors-odin"          % procVer,
     "org.clulab"    %% "processors-openie"        % procVer,
+    "org.clulab"    %% "processors-corenlp"        % procVer,
     "org.scalatest" %% "scalatest"                % "3.0.1"  % Test,
     "com.typesafe"  %  "config"                   % "1.3.1",
     "org.slf4j"     % "slf4j-api"                 % "1.7.10",

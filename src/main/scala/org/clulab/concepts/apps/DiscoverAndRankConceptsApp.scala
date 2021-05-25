@@ -18,7 +18,7 @@ object DiscoverAndRankConceptsApp extends App {
   val conceptDiscovery = ConceptDiscoverer.fromConfig()
   val files = FileUtils.findFiles(inputDir, "json")
   val discoveryDocuments = files.zipWithIndex.par.flatMap { case (file, index) =>
-    println(s"$index ${file.getName}")
+//    println(s"$index ${file.getName}")
     val conceptSource = ConceptSource(file)
     val docId = conceptSource.getIdOpt.get
     val scoredSentences = conceptSource.getScoredSentences
