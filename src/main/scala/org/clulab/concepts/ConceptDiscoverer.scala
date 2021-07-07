@@ -78,7 +78,7 @@ class ConceptDiscoverer(
       logger.info(s"$docIndex doc ${originalDoc.docid} is being processed")
       val start = Calendar.getInstance
       val sentences = originalDoc.sentences
-      val sentenceThreshold = proportionSentencesKeep.flatMap(prop => findThreshold(sentences, prop))
+      val sentenceThreshold = Some(0.75)//proportionSentencesKeep.flatMap(prop => findThreshold(sentences, prop))
 
       sentences.zipWithIndex.par.foreach { case (sentence, sentIndex) =>
         // see of the sentence's score is > threshold (else, if not using threshold)
