@@ -12,7 +12,6 @@ libraryDependencies ++= {
 
   Seq(
     "org.clulab"    %% "processors-main"          % procVer,
-    "org.clulab"    %% "processors-odin"          % procVer,
     "org.clulab"    %% "processors-openie"        % procVer,
     "org.clulab"    %% "processors-corenlp"        % procVer,
     "org.scalatest" %% "scalatest"                % "3.0.1"  % Test,
