@@ -122,9 +122,9 @@ class ConceptDiscoverer(
     Sourcer.sourceFromFile(new File(file_loc)).autoClose { source =>
       val lines = source.getLines().toArray
       lines.foreach { line =>
-        val phrase = line.stripLineEnd.split('\t')(0)
-        val locations = line.stripLineEnd.split('\t')(1)
-        conceptLocations(phrase) += DocumentLocation(locations.split(' ')(0), locations.split(' ')(1).toInt)
+        val Array(phrase, locations) = line.stripLineEnd.split('\t').take(2)
+        val Array(docid, sent) = locations.split(' ').take(2)
+        conceptLocations(phrase) += DocumentLocation(docid, sent.toInt)
       }
     }
     conceptLocations.map{
