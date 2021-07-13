@@ -87,7 +87,25 @@ class TestConceptDiscoverer extends FlatSpec with Matchers {
     val allRankedConcepts = conceptDiscovery.rankConcepts(conceptDiscovery.discoverConcepts(urlDocuments))
     allRankedConcepts.map(_.concept.phrase) should be (Seq("Mr.google"))
   }
-  
+
+  it should "filter NER" in {
+    val nerTexts = Seq(
+      Seq("The other day president Biden went to South America to buy coconuts for his upcoming date with the UN.")
+    )
+    val nerDocuments = nerTexts.zipWithIndex.map{ case (sentences, i) =>
+      var end = 0
+      val scoredSentences = for (sentence <- sentences) yield {
+        val start = end
+        end = start + sentence.length
+        ScoredSentence(sentence, start, end, 1.0)
+      }
+      // all sentences have equal score
+      DiscoveryDocument(s"doc$i", scoredSentences)
+    }
+    val allRankedConcepts = conceptDiscovery.rankConcepts(conceptDiscovery.discoverConcepts(nerDocuments))
+    allRankedConcepts.map(_.concept.phrase) should contain theSameElementsAs (Seq("coconuts", "upcoming date"))
+  }
+
   conceptDiscovery.rankConcepts(concepts)
 
 }

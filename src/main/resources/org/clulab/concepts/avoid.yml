@@ -35,3 +35,10 @@ rules:
     type: token
     pattern: |
       [word = /www|http|[.]com|[.]org|[.]edu/]
+
+  - name: "avoid_NER"
+    label: Avoid
+    priority: 1
+    type: token
+    pattern: |
+      [entity=/[A-Z][A-Z]+/]
