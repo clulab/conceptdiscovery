@@ -40,7 +40,7 @@ class TestConceptDiscoverer extends FlatSpec with Matchers {
   println()
 
   it should "find food security concepts" in {
-    concepts.map(_.phrase) should contain allOf("resilience", "basic foodstuffs", "pillars")
+    concepts.map(_.phrase) should contain allOf("acceptable foods", "basic foodstuffs", "pillars")
   }
 
   it should "have reasonable frequency estimates" in {
