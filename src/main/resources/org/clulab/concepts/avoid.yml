@@ -42,3 +42,12 @@ rules:
     type: token
     pattern: |
       [entity=/[A-Z][A-Z]+/]
+
+  # We were asked to not include examples from the current ontology examples.
+  # FIXME: this is a terrible long term solution, but it works for now... :(
+  - name: "avoid_Curr_Ontology_Examples"
+    label: Avoid
+    priority: 1
+    type: token
+    pattern: |
+      ([entity="B-CurrExamples"] [entity="I-CurrExamples"]*) | [entity="I-CurrExamples"]+

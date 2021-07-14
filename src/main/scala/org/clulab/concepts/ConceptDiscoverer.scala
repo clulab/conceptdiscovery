@@ -16,6 +16,7 @@ import java.util.concurrent.TimeUnit
 import scala.collection.mutable
 import java.io.{File, FileOutputStream, PrintStream}
 
+import org.clulab.sequences.LexiconNER
 import org.clulab.utils.{Logging, Sourcer}
 import org.slf4j.{Logger, LoggerFactory}
 
@@ -212,7 +213,8 @@ object ConceptDiscoverer {
   def fromConfig(config: Config = ConfigFactory.load()): ConceptDiscoverer = {
     Utils.initializeDyNet()
     val processor = new FastNLPProcessor()
-    val annotator = new Annotator(processor)
+    val lexiconNER = LexiconNER(kbs = Seq("org/clulab/concepts/CurrExamples.tsv"), caseInsensitiveMatching = false)
+    val annotator = new Annotator(processor, lexiconNER)
     // Without this priming, the processor will hand.
     annotator.annotate("Once upon a time there were three bears.")
     val entityFinder = CustomizableRuleBasedFinder.fromConfig(
