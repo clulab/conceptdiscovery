@@ -40,7 +40,7 @@ class TestConceptDiscoverer extends FlatSpec with Matchers {
   println()
 
   it should "find food security concepts" in {
-    concepts.map(_.phrase) should contain allOf("food security", "access", "availability")
+    concepts.map(_.phrase) should contain allOf("acceptable foods", "basic foodstuffs", "pillars")
   }
 
   it should "have reasonable frequency estimates" in {
@@ -55,15 +55,15 @@ class TestConceptDiscoverer extends FlatSpec with Matchers {
   it should "filter low saliency sentences" in {
     // keeping only most salient 20% of the sentences
     val filteredConcepts = conceptDiscovery.discoverConcepts(documents, Some(0.1)).map(_.phrase)
-    filteredConcepts should contain ("food security")
+    filteredConcepts should contain ("needs")
     filteredConcepts should not contain ("availability")
   }
 
   it should "keep top k by frequency" in {
     val freqEnough = conceptDiscovery.discoverMostFrequentConcepts(documents, None, 1, 2)
     val mostFreq = conceptDiscovery.discoverMostFrequentConcepts(documents, None, 4, 1)
-    freqEnough.map(_.phrase) should contain inOrderOnly ("food security", "times")
-    mostFreq.map(_.phrase) should contain only ("food security")
+    freqEnough.map(_.phrase) should contain inOrderOnly ("times", "Food")
+    mostFreq.map(_.phrase) should contain only ("times")
   }
 
   it should "filter URLs" in {
@@ -87,7 +87,44 @@ class TestConceptDiscoverer extends FlatSpec with Matchers {
     val allRankedConcepts = conceptDiscovery.rankConcepts(conceptDiscovery.discoverConcepts(urlDocuments))
     allRankedConcepts.map(_.concept.phrase) should be (Seq("Mr.google"))
   }
-  
+
+  it should "filter out NER" in {
+    val nerTexts = Seq(
+      Seq("The other day Biden went to South America to buy coconuts for his upcoming date with the UN.")
+    )
+    val nerDocuments = nerTexts.zipWithIndex.map{ case (sentences, i) =>
+      var end = 0
+      val scoredSentences = for (sentence <- sentences) yield {
+        val start = end
+        end = start + sentence.length
+        ScoredSentence(sentence, start, end, 1.0)
+      }
+      // all sentences have equal score
+      DiscoveryDocument(s"doc$i", scoredSentences)
+    }
+    val allRankedConcepts = conceptDiscovery.rankConcepts(conceptDiscovery.discoverConcepts(nerDocuments))
+    allRankedConcepts.map(_.concept.phrase) should contain theSameElementsAs (Seq("coconuts", "upcoming date"))
+  }
+
+  it should "filter out curr ontology examples" in {
+    val nerTexts = Seq(
+      Seq("There are warmer temperatures and puppies in the aqueduct.")
+    )
+    val nerDocuments = nerTexts.zipWithIndex.map{ case (sentences, i) =>
+      var end = 0
+      val scoredSentences = for (sentence <- sentences) yield {
+        val start = end
+        end = start + sentence.length
+        ScoredSentence(sentence, start, end, 1.0)
+      }
+      // all sentences have equal score
+      DiscoveryDocument(s"doc$i", scoredSentences)
+    }
+    val allRankedConcepts = conceptDiscovery.rankConcepts(conceptDiscovery.discoverConcepts(nerDocuments))
+    allRankedConcepts.map(_.concept.phrase) should contain theSameElementsAs (Seq("puppies"))
+  }
+
+
   conceptDiscovery.rankConcepts(concepts)
 
 }

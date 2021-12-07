@@ -13,7 +13,7 @@ object DiscoverAndRankConceptsApp extends App {
   val thresholdSimilarity = 0
   val topPick = 10000
   // This goes last, even though not used last, because it is optional.
-  val sentenceThresholdOpt = None
+  val sentenceThresholdOpt = Some(0.75)
 
   val conceptDiscovery = ConceptDiscoverer.fromConfig()
   val files = FileUtils.findFiles(inputDir, "json")

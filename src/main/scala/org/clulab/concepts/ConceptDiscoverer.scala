@@ -6,14 +6,19 @@ import org.clulab.embeddings.{CompactWordEmbeddingMap, WordEmbeddingMapPool}
 import org.clulab.openie.entities.{CustomizableRuleBasedFinder, RuleBasedEntityFinder}
 import org.clulab.openie.filtering.StopWordManager
 import org.clulab.processors.fastnlp.FastNLPProcessor
+import org.clulab.utils.Closer.AutoCloser
 import org.jgrapht.graph._
 import org.jgrapht.alg.scoring.PageRank
 import com.github.jelmerk.knn.scalalike.SearchResult
-
 import java.util.Calendar
 import java.util.concurrent.TimeUnit
+
 import scala.collection.mutable
-import java.io.{FileOutputStream, PrintStream}
+import java.io.{File, FileOutputStream, PrintStream}
+
+import org.clulab.sequences.LexiconNER
+import org.clulab.utils.{Logging, Sourcer}
+import org.slf4j.{Logger, LoggerFactory}
 
 class ConceptDiscoverer(
    annotator: Annotator,
@@ -21,6 +26,9 @@ class ConceptDiscoverer(
    stopManager: StopWordManager,
    wordEmbeddings: CompactWordEmbeddingMap
  ) {
+
+  val logger: Logger = LoggerFactory.getLogger(classOf[ConceptDiscoverer])
+
   /**
    * Discover concepts using the entity finder, keep track of where they were found,
    * and return the top K most frequent.  If a proportionSentencesKeep is provided,
@@ -57,25 +65,23 @@ class ConceptDiscoverer(
    * @return
    */
   def discoverConcepts(
-                        documents: Seq[DiscoveryDocument],
-                        proportionSentencesKeep: Option[Double] = None
-                      ): Vector[Concept] = {
-    if (proportionSentencesKeep.isDefined) {
-      println()
-    }
+    documents: Seq[DiscoveryDocument],
+    proportionSentencesKeep: Option[Double] = None
+  ): Vector[Concept] =
+{
+
     // For each concept (key) holds the document locations (values) where that
     // concept occurred in the corpus.
     val conceptLocations = mutable.Map.empty[String, Set[DocumentLocation]]
       .withDefaultValue(Set.empty)
 
     documents.zipWithIndex.foreach { case (originalDoc, docIndex) =>
-      println(s"$docIndex doc ${originalDoc.docid} is being processed")
+      logger.info(s"$docIndex doc ${originalDoc.docid} is being processed")
       val start = Calendar.getInstance
       val sentences = originalDoc.sentences
       val sentenceThreshold = proportionSentencesKeep.flatMap(prop => findThreshold(sentences, prop))
 
       sentences.zipWithIndex.par.foreach { case (sentence, sentIndex) =>
-//        println(s"$docIndex $sentIndex")
         // see of the sentence's score is > threshold (else, if not using threshold)
         if (keepSentence(sentence, sentenceThreshold)) {
           // annotate this sentence
@@ -90,7 +96,7 @@ class ConceptDiscoverer(
         }
       }
       val time = Calendar.getInstance
-      println(s"Finished in ${TimeUnit.MILLISECONDS.toSeconds(time.getTimeInMillis() - start.getTimeInMillis())} seconds, we already processed ${docIndex + 1} docs now.")
+      logger.info(s"Finished in ${TimeUnit.MILLISECONDS.toSeconds(time.getTimeInMillis() - start.getTimeInMillis())} seconds, we already processed ${docIndex + 1} docs now.")
     }
 
     conceptLocations.map{
@@ -104,7 +110,7 @@ class ConceptDiscoverer(
         val phrase = concept.phrase
         val locations = concept.documentLocations
         locations.foreach{loc =>
-          println(phrase+'\t'+loc.docid+' '+loc.sent.toString)
+          logger.info(phrase+'\t'+loc.docid+' '+loc.sent.toString)
         }
       }
     }
@@ -113,10 +119,14 @@ class ConceptDiscoverer(
   def loadConcepts(file_loc: String): Vector[Concept]={
     val conceptLocations = mutable.Map.empty[String, Set[DocumentLocation]]
       .withDefaultValue(Set.empty)
-    scala.io.Source.fromFile(file_loc).getLines().foreach{line =>
-      val phrase = line.stripLineEnd.split('\t')(0)
-      val locations = line.stripLineEnd.split('\t')(1)
-      conceptLocations(phrase) += DocumentLocation(locations.split(' ')(0), locations.split(' ')(1).toInt)
+
+    Sourcer.sourceFromFile(new File(file_loc)).autoClose { source =>
+      val lines = source.getLines().toArray
+      lines.foreach { line =>
+        val Array(phrase, locations) = line.stripLineEnd.split('\t').take(2)
+        val Array(docid, sent) = locations.split(' ').take(2)
+        conceptLocations(phrase) += DocumentLocation(docid, sent.toInt)
+      }
     }
     conceptLocations.map{
       case (phrase, locations) => Concept(phrase, locations)
@@ -156,17 +166,11 @@ class ConceptDiscoverer(
       // add (internally library handles not adding if already there)
       g.addVertex(concept.phrase)
     }
-//    for (List(c1, c2) <- concepts.combinations(2)) {
-//      val weight = wordEmbeddings.avgSimilarity(c1.phrase.split(' '), c2.phrase.split(' '))
-//      if (weight > similarityThreshold && !g.containsEdge(c1.phrase, c2.phrase)) {
-//        val e = g.addEdge(c1.phrase, c2.phrase)
-//        g.setEdgeWeight(e, weight)
-//      }
-//    }
+
     // build index
     val index = buildIndex(concepts)
     // build graph
-    buildIndex(concepts).foreach{ c1 =>
+    index.foreach{ c1 =>
       index.findNeighbors(c1.id, topK).foreach{case SearchResult(c2, distance) =>
         if (distance > similarityThreshold && !g.containsEdge(c1.id.nodeName, c2.id.nodeName)){
           val e = g.addEdge(c1.id.nodeName, c2.id.nodeName)
@@ -209,7 +213,8 @@ object ConceptDiscoverer {
   def fromConfig(config: Config = ConfigFactory.load()): ConceptDiscoverer = {
     Utils.initializeDyNet()
     val processor = new FastNLPProcessor()
-    val annotator = new Annotator(processor)
+    val lexiconNER = LexiconNER(kbs = Seq("org/clulab/concepts/CurrExamples.tsv"), caseInsensitiveMatching = false)
+    val annotator = new Annotator(processor, lexiconNER)
     // Without this priming, the processor will hand.
     annotator.annotate("Once upon a time there were three bears.")
     val entityFinder = CustomizableRuleBasedFinder.fromConfig(

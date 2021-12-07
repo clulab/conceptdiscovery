@@ -21,14 +21,13 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= {
-  val procVer = "8.3.4"
+  val procVer = "8.4.1"
 
   Seq(
     "com.github.jelmerk" %% "hnswlib-scala"      % "0.0.46",
     "com.typesafe"       %  "config"             % "1.3.1",
     "org.clulab"         %% "processors-corenlp" % procVer,
     "org.clulab"         %% "processors-main"    % procVer,
-    "org.clulab"         %% "processors-odin"    % procVer,
     "org.clulab"         %% "processors-openie"  % procVer,
     "org.jgrapht"        % "jgrapht-core"        % "1.4.0",
     "org.scalatest"      %% "scalatest"          % "3.0.1"  % Test,
