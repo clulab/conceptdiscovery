@@ -1,3 +1,4 @@
+import org.clulab.sbt.BuildUtils
 import org.clulab.sbt.Resolvers
 
 name := "conceptdiscovery"
@@ -23,16 +24,15 @@ libraryDependencies ++= {
   val procVer = "8.3.4"
 
   Seq(
-    "org.clulab"         %% "processors-main"          % procVer,
-    "org.clulab"         %% "processors-odin"          % procVer,
-    "org.clulab"         %% "processors-openie"        % procVer,
-    "org.clulab"         %% "processors-corenlp"       % procVer,
-    "org.scalatest"      %% "scalatest"                % "3.0.1"  % Test,
-    "com.typesafe"       %  "config"                   % "1.3.1",
-    "org.slf4j"          % "slf4j-api"                 % "1.7.10",
-    "org.jgrapht"        % "jgrapht-core"              % "1.4.0",
-    "com.github.jelmerk" %% "hnswlib-scala"            % "0.0.46"
+    "com.github.jelmerk" %% "hnswlib-scala"      % "0.0.46",
+    "com.typesafe"       %  "config"             % "1.3.1",
+    "org.clulab"         %% "processors-corenlp" % procVer,
+    "org.clulab"         %% "processors-main"    % procVer,
+    "org.clulab"         %% "processors-odin"    % procVer,
+    "org.clulab"         %% "processors-openie"  % procVer,
+    "org.jgrapht"        % "jgrapht-core"        % "1.4.0",
+    "org.scalatest"      %% "scalatest"          % "3.0.1"  % Test,
+    "org.slf4j"          % "slf4j-api"           % "1.7.10"
   )
 }
-
 
