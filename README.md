@@ -35,4 +35,59 @@ val concepts = conceptDiscovery.discoverConcepts(documents)
 val ranked_concepts = conceptDiscovery.rankConcepts(concepts)
 ```
 
-For example, TODO ZHENG: print concepts here.
+For example:
+```
+[ {
+  "concept" : {
+    "phrase" : "' average production",
+    "locations" : [ {
+      "document_id" : "0df84c35985ba0130636ab8686943756",
+      "sentence_index" : 225
+    }, {
+      "document_id" : "0df84c35985ba0130636ab8686943756",
+      "sentence_index" : 244
+    }, ... ]
+  },
+  "saliency" : 0.07536057667010426
+}, {
+  "concept" : {
+    "phrase" : "'s production",
+    "locations" : [ {
+      "document_id" : "0df84c35985ba0130636ab8686943756",
+      "sentence_index" : 225
+    }, {
+      "document_id" : "0df84c35985ba0130636ab8686943756",
+      "sentence_index" : 244
+    }, ... ]
+  },
+  "saliency" : 0.07435705153994535
+}, {
+  "concept" : {
+    "phrase" : "women",
+    "locations" : [ {
+      "document_id" : "0289d3a06c7872344154991549c6f823",
+      "sentence_index" : 10
+    }, {
+      "document_id" : "0289d3a06c7872344154991549c6f823",
+      "sentence_index" : 11
+    }, ... ]
+  },
+  "saliency" : 0.07011902079604163
+}, {
+  "concept" : {
+    "phrase" : "Somalia",
+    "locations" : [ {
+      "document_id" : "0bc9c72b3c259d67672e5c3163101828",
+      "sentence_index" : 5
+    }, {
+      "document_id" : "0194254586b5e82c3b24af36907b94d1",
+      "sentence_index" : 9
+    }, {
+      "document_id" : "0eb5eee25d3e3f652fd707a0a674a38b",
+      "sentence_index" : 11
+    }, ... ]
+  },
+  "saliency" : 0.06664052798844469
+}, ... ]
+
+```
