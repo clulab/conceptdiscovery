@@ -32,10 +32,17 @@ We load the ConceptDiscoverer from the config file and apply it to the documents
 ```  
 val conceptDiscovery = ConceptDiscoverer.fromConfig()
 val concepts = conceptDiscovery.discoverConcepts(documents)
-val ranked_concepts = conceptDiscovery.rankConcepts(concepts)
+val rankedConcepts = conceptDiscovery.rankConcepts(concepts)
 ```
 
-For example:
+You can save the ranked concepts in json formart:
+```
+val conceptSink = new ConceptSink(rankedConcepts)
+Console.withOut(new PrintStream(new FileOutputStream("output_full.json"))){
+   conceptSink.printJson()
+}
+```
+Here is some sample outputs:
 ```
 [ {
   "concept" : {
