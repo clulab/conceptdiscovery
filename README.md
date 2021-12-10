@@ -5,7 +5,7 @@
 
 This repository contains code to identify salient concepts in a text corpus. This code is part of the World Modeler's Ontology in a Day (OIAD) pipeline.
 
-At a high level, this software uses the [TextRank algorithm](https://aclanthology.org/W04-3252.pdf) to rank noun phrases rather than sentences, as the original algorithm did. More specifically, the algorithm constructs a graph where concepts, i.e., noun phrases, are nodes, and edges indicate two concepts with high similar score. Then, the TextRank algorithm is used to generate PageRank scores for all nodes in the graph. The top nodes with the highest scores are returned by the algorithm.
+At a high level, this software uses the [TextRank algorithm](https://aclanthology.org/W04-3252.pdf) to rank noun phrases rather than sentences, as the original algorithm did. More specifically, the algorithm constructs a graph where concepts, i.e., noun phrases, are nodes, and edge weights indicate the similarity between the corresponding concepts. Then, the TextRank algorithm is used to generate PageRank scores for all nodes in the graph. The top nodes with the highest scores are returned by the algorithm.
 
 The API follows the following steps.
 
