@@ -3,19 +3,20 @@
 
 # conceptdiscovery
 
-We provide the concept discovery API here to help people to extract and rank the concepts in documents. The documents are ranked using an extension of
-TextRank, an algorithm inspired by PageRank that treats text as a graph and applies a graph-based ranking algorithm to surface keywords or phrases.
+This repository contains code to identify salient concepts in a text corpus. This code is part of the World Modeler's Ontology in a Day (OIAD) pipeline.
 
-An example usage is given below:
+At a high level, this software uses the [TextRank algorithm](https://aclanthology.org/W04-3252.pdf) to rank noun phrases rather than sentences, as the original algorithm did. More specifically, the algorithm constructs a graph where concepts, i.e., noun phrases, are nodes, and edges indicate TODO ZHENG. Then, the TextRank algorithm is used to generate PageRank scores for all nodes in the graph. The top nodes with the highest scores are returned by the algorithm.
 
-First you need to prepare a sequence of input sentences with sentence score, this score will later be used for filtering the sentences:
+The API follows the following steps.
+
+First you need to prepare a sequence of input sentences, with each sentence associated with a score, where TODO ZHENG: WHAT DO THESE SCORES MEAN AND WHERE DO THEY COME FROM?. This score is used for filtering out less important sentences:
 ```
 val texts = Seq(
     Seq(
       ("Food security is a measure of the availability of food and individuals' ability to access it.", 0.4),
       ))
 ```
-Then convert texts to CDR documents:
+Then convert texts to the World Modelers CDR document format:
 ```
   val documents = for ((sentencesWithScores, i) <- texts.zipWithIndex) yield {
     var end = 0
@@ -27,8 +28,10 @@ Then convert texts to CDR documents:
     DiscoveryDocument(s"doc$i", scoredSentences)
   }
 ```
-We load the ConceptDiscoverer from the config file and apply it to the docuemtns:
+We load the ConceptDiscoverer from the config file and apply it to the documents:
 ```  
 val conceptDiscovery = ConceptDiscoverer.fromConfig()
 val concepts = conceptDiscovery.discoverConcepts(documents)
 ```
+
+For example, TODO ZHENG: print concepts here.
