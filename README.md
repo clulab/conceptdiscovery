@@ -9,7 +9,7 @@ At a high level, this software uses the [TextRank algorithm](https://aclantholog
 
 The API follows the following steps.
 
-First you need to prepare a sequence of input sentences, with each sentence associated with a score, where TODO ZHENG: WHAT DO THESE SCORES MEAN AND WHERE DO THEY COME FROM?. This score is used for filtering out less important sentences:
+First you need to prepare a sequence of input sentences, with each sentence associated with a goodness score that must be provided. This score is used for filtering out less important sentences at runtime:
 ```
 val texts = Seq(
     Seq(
