@@ -35,18 +35,18 @@ val concepts = conceptDiscovery.discoverConcepts(documents)
 val rankedConcepts = conceptDiscovery.rankConcepts(concepts)
 ```
 
-You can save the ranked concepts in json formart:
+You can save the ranked concepts in json format:
 ```
 val conceptSink = new ConceptSink(rankedConcepts)
 Console.withOut(new PrintStream(new FileOutputStream("output_full.json"))){
    conceptSink.printJson()
 }
 ```
-Here is some sample outputs:
+The JSON output format looks like this:
 ```
 [ {
   "concept" : {
-    "phrase" : "' average production",
+    "phrase" : "average production",
     "locations" : [ {
       "document_id" : "0df84c35985ba0130636ab8686943756",
       "sentence_index" : 225
@@ -58,7 +58,7 @@ Here is some sample outputs:
   "saliency" : 0.07536057667010426
 }, {
   "concept" : {
-    "phrase" : "'s production",
+    "phrase" : "production",
     "locations" : [ {
       "document_id" : "0df84c35985ba0130636ab8686943756",
       "sentence_index" : 225
