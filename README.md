@@ -5,11 +5,11 @@
 
 This repository contains code to identify salient concepts in a text corpus. This code is part of the World Modeler's Ontology in a Day (OIAD) pipeline.
 
-At a high level, this software uses the [TextRank algorithm](https://aclanthology.org/W04-3252.pdf) to rank noun phrases rather than sentences, as the original algorithm did. More specifically, the algorithm constructs a graph where concepts, i.e., noun phrases, are nodes, and edges indicate two concepts with high similar score. Then, the TextRank algorithm is used to generate PageRank scores for all nodes in the graph. The top nodes with the highest scores are returned by the algorithm.
+At a high level, this software uses the [TextRank algorithm](https://aclanthology.org/W04-3252.pdf) to rank noun phrases rather than sentences, as the original algorithm did. More specifically, the algorithm constructs a graph where concepts, i.e., noun phrases, are nodes, and edge weights indicate the similarity between the corresponding concepts. Then, the TextRank algorithm is used to generate PageRank scores for all nodes in the graph. The top nodes with the highest scores are returned by the algorithm.
 
 The API follows the following steps.
 
-First you need to prepare a sequence of input sentences, with each sentence associated with a score, where TODO ZHENG: WHAT DO THESE SCORES MEAN AND WHERE DO THEY COME FROM?. This score is used for filtering out less important sentences:
+First you need to prepare a sequence of input sentences, with each sentence associated with a goodness score that must be provided. This score is used for filtering out less important sentences at runtime:
 ```
 val texts = Seq(
     Seq(
@@ -32,7 +32,69 @@ We load the ConceptDiscoverer from the config file and apply it to the documents
 ```  
 val conceptDiscovery = ConceptDiscoverer.fromConfig()
 val concepts = conceptDiscovery.discoverConcepts(documents)
-val ranked_concepts = conceptDiscovery.rankConcepts(concepts)
+val rankedConcepts = conceptDiscovery.rankConcepts(concepts)
 ```
 
-For example, TODO ZHENG: print concepts here.
+You can save the ranked concepts in json format:
+```
+val conceptSink = new ConceptSink(rankedConcepts)
+Console.withOut(new PrintStream(new FileOutputStream("output_full.json"))){
+   conceptSink.printJson()
+}
+```
+The JSON output format looks like this:
+```
+[ {
+  "concept" : {
+    "phrase" : "average production",
+    "locations" : [ {
+      "document_id" : "0df84c35985ba0130636ab8686943756",
+      "sentence_index" : 225
+    }, {
+      "document_id" : "0df84c35985ba0130636ab8686943756",
+      "sentence_index" : 244
+    }, ... ]
+  },
+  "saliency" : 0.07536057667010426
+}, {
+  "concept" : {
+    "phrase" : "production",
+    "locations" : [ {
+      "document_id" : "0df84c35985ba0130636ab8686943756",
+      "sentence_index" : 225
+    }, {
+      "document_id" : "0df84c35985ba0130636ab8686943756",
+      "sentence_index" : 244
+    }, ... ]
+  },
+  "saliency" : 0.07435705153994535
+}, {
+  "concept" : {
+    "phrase" : "women",
+    "locations" : [ {
+      "document_id" : "0289d3a06c7872344154991549c6f823",
+      "sentence_index" : 10
+    }, {
+      "document_id" : "0289d3a06c7872344154991549c6f823",
+      "sentence_index" : 11
+    }, ... ]
+  },
+  "saliency" : 0.07011902079604163
+}, {
+  "concept" : {
+    "phrase" : "Somalia",
+    "locations" : [ {
+      "document_id" : "0bc9c72b3c259d67672e5c3163101828",
+      "sentence_index" : 5
+    }, {
+      "document_id" : "0194254586b5e82c3b24af36907b94d1",
+      "sentence_index" : 9
+    }, {
+      "document_id" : "0eb5eee25d3e3f652fd707a0a674a38b",
+      "sentence_index" : 11
+    }, ... ]
+  },
+  "saliency" : 0.06664052798844469
+}, ... ]
+
+```
