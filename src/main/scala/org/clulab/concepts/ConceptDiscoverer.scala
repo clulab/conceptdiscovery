@@ -20,6 +20,9 @@ import org.clulab.sequences.LexiconNER
 import org.clulab.utils.{Logging, Sourcer}
 import org.slf4j.{Logger, LoggerFactory}
 
+import scala.io.Source
+import scala.util.parsing.json._
+
 class ConceptDiscoverer(
    annotator: Annotator,
    entityFinder: RuleBasedEntityFinder,
@@ -177,6 +180,43 @@ class ConceptDiscoverer(
           g.setEdgeWeight(e, distance)
         }
       }
+    }
+
+    val pr = new PageRank(g)
+    concepts
+      // add PageRank scores to each concept
+      .map(c => ScoredConcept(c, pr.getVertexScore(c.phrase)))
+      // and return them in order of saliency (highest first)
+      .sortBy(-_.saliency)
+  }
+  /**
+   * Rank candidate concepts based on their overall saliency in the corpus.
+   * First, the candidate concepts are pruned using
+   * @param input_file the input JSON file, contains the information of a graph
+   * @return
+   */
+  def rankGraphFromJSON(input_file: String): Seq[ScoredConcept] = {
+    var concepts = Seq[Concept]()
+    var node_map = Map[String, String]()
+    val locations = Set(DocumentLocation(input_file, 0))
+    val jsonString = Source.fromFile(input_file).getLines.mkString
+    val parsed = JSON.parseFull(jsonString)
+    val nodes = parsed.get.asInstanceOf[Map[String, Any]]("nodes").asInstanceOf[List[Any]]
+    val edges = parsed.get.asInstanceOf[Map[String, Any]]("nodes").asInstanceOf[List[Any]]
+    // construct graph from concepts
+    val g = new SimpleWeightedGraph[String, DefaultEdge](classOf[DefaultEdge])
+    for (node <- nodes) {
+      // add (internally library handles not adding if already there)
+      g.addVertex(node.asInstanceOf[Map[String, String]]("text"))
+      node_map += (node.asInstanceOf[Map[String, String]]("id") -> node.asInstanceOf[Map[String, String]]("text"))
+      concepts :+= Concept(node.asInstanceOf[Map[String, String]]("id"), locations)
+    }
+    for (edge <- edges){
+      val weight = edge.asInstanceOf[Map[String, Float]]("weight")
+      val src = node_map(edge.asInstanceOf[Map[String, String]]("src"))
+      val dst = node_map(edge.asInstanceOf[Map[String, String]]("dst"))
+      val e = g.addEdge(src, dst)
+      g.setEdgeWeight(e, weight)
     }
 
     val pr = new PageRank(g)

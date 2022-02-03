@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "0",
+      "text": "node1"
+    },
+    {
+      "id": "1",
+      "text": "node2"
+    },
+    {
+      "id": "2",
+      "text": "node3"
+    },
+    {
+      "id": "3",
+      "text": "node4"
+    }
+  ],
+  "edges": [
+    {
+      "src": "0",
+      "dst": "1",
+      "weight": 1
+    },
+    {
+      "src": "0",
+      "dst": "2",
+      "weight": 1
+    },
+    {
+      "src": "1",
+      "dst": "2",
+      "weight": 1
+    },
+    {
+      "src": "2",
+      "dst": "3",
+      "weight": 1
+    }
+  ]
+}
