@@ -1,42 +1,2173 @@
 {
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
   "nodes": [
     {
-      "id": "0",
-      "text": "node1"
+      "size": 3,
+      "id": "ACEP"
     },
     {
-      "id": "1",
-      "text": "node2"
+      "size": 1,
+      "id": "AD"
     },
     {
-      "id": "2",
-      "text": "node3"
+      "size": 1,
+      "id": "AMC"
     },
     {
-      "id": "3",
-      "text": "node4"
+      "size": 3,
+      "id": "ANACIM"
+    },
+    {
+      "size": 1,
+      "id": "APIX"
+    },
+    {
+      "size": 6,
+      "id": "ASPRODEB"
+    },
+    {
+      "size": 3,
+      "id": "ASSOLUCER"
+    },
+    {
+      "size": 1,
+      "id": "Africa Market Systems"
+    },
+    {
+      "size": 1,
+      "id": "Agricultural Markets Improved"
+    },
+    {
+      "size": 1,
+      "id": "Agricultural Policy Environment Strengthened"
+    },
+    {
+      "size": 1,
+      "id": "Agricultural Productivity Improved"
+    },
+    {
+      "size": 1,
+      "id": "Agriculture Insurance"
+    },
+    {
+      "size": 1,
+      "id": "Al Thiaka"
+    },
+    {
+      "size": 1,
+      "id": "Anambé Basin"
+    },
+    {
+      "size": 1,
+      "id": "BNDE"
+    },
+    {
+      "size": 1,
+      "id": "BOS"
+    },
+    {
+      "size": 1,
+      "id": "BRM"
+    },
+    {
+      "size": 3,
+      "id": "Bank"
+    },
+    {
+      "size": 2,
+      "id": "Blouf Emano"
+    },
+    {
+      "size": 1,
+      "id": "Boundoum"
+    },
+    {
+      "size": 2,
+      "id": "CCAC"
+    },
+    {
+      "size": 2,
+      "id": "CFA"
+    },
+    {
+      "size": 1,
+      "id": "CFAF"
+    },
+    {
+      "size": 1,
+      "id": "CGER"
+    },
+    {
+      "size": 2,
+      "id": "CINSERE"
+    },
+    {
+      "size": 2,
+      "id": "CIRIZ"
+    },
+    {
+      "size": 1,
+      "id": "CLSPs"
+    },
+    {
+      "size": 2,
+      "id": "CNAAS"
+    },
+    {
+      "size": 14,
+      "id": "CNCAS"
+    },
+    {
+      "size": 1,
+      "id": "CNT Suarl"
+    },
+    {
+      "size": 1,
+      "id": "COOPAD"
+    },
+    {
+      "size": 1,
+      "id": "COPEC"
+    },
+    {
+      "size": 1,
+      "id": "CORIS Bank"
+    },
+    {
+      "size": 2,
+      "id": "CSC"
+    },
+    {
+      "size": 1,
+      "id": "CommAgri"
+    },
+    {
+      "size": 1,
+      "id": "Conservation Farming"
+    },
+    {
+      "size": 2,
+      "id": "Consolidation Network"
+    },
+    {
+      "size": 2,
+      "id": "Consolidation Networks"
+    },
+    {
+      "size": 1,
+      "id": "Coumba Nor Thiam SA"
+    },
+    {
+      "size": 3,
+      "id": "DBF Agro-Industries"
+    },
+    {
+      "size": 1,
+      "id": "DDL"
+    },
+    {
+      "size": 1,
+      "id": "DGE"
+    },
+    {
+      "size": 1,
+      "id": "DQA"
+    },
+    {
+      "size": 3,
+      "id": "DRDR"
+    },
+    {
+      "size": 1,
+      "id": "Department of Internal Trade"
+    },
+    {
+      "size": 1,
+      "id": "Diama"
+    },
+    {
+      "size": 1,
+      "id": "Dimbal Jaboot"
+    },
+    {
+      "size": 1,
+      "id": "Déggé Saf Sap Network"
+    },
+    {
+      "size": 1,
+      "id": "Economic Empowerment Global Learning Forum"
+    },
+    {
+      "size": 1,
+      "id": "Economic Growth Project"
+    },
+    {
+      "size": 2,
+      "id": "Entente Diouloulou"
+    },
+    {
+      "size": 3,
+      "id": "FCFA"
+    },
+    {
+      "size": 7,
+      "id": "FEPROBA"
+    },
+    {
+      "size": 11,
+      "id": "FIARA"
+    },
+    {
+      "size": 2,
+      "id": "FIDAK"
+    },
+    {
+      "size": 1,
+      "id": "FIKA"
+    },
+    {
+      "size": 7,
+      "id": "FPA"
+    },
+    {
+      "size": 4,
+      "id": "FTF"
+    },
+    {
+      "size": 1,
+      "id": "FTF Senegal"
+    },
+    {
+      "size": 2,
+      "id": "Federation of Producers of the Anambé Basin"
+    },
+    {
+      "size": 1,
+      "id": "Feed the Future Senegal Naatal Mbay"
+    },
+    {
+      "size": 1,
+      "id": "Future Senegal Naatal Mbay"
+    },
+    {
+      "size": 1,
+      "id": "Futurs Médias"
+    },
+    {
+      "size": 1,
+      "id": "GCC"
+    },
+    {
+      "size": 1,
+      "id": "GIE Malal"
+    },
+    {
+      "size": 2,
+      "id": "GIE Takku Liguey"
+    },
+    {
+      "size": 1,
+      "id": "GIE Thiaytou"
+    },
+    {
+      "size": 2,
+      "id": "GIE Yoonu Toll"
+    },
+    {
+      "size": 1,
+      "id": "GIE al Thiaka"
+    },
+    {
+      "size": 1,
+      "id": "GIE de Femmes Productrices de Ross Béthio"
+    },
+    {
+      "size": 2,
+      "id": "GLEE"
+    },
+    {
+      "size": 1,
+      "id": "GOS"
+    },
+    {
+      "size": 1,
+      "id": "GTP"
+    },
+    {
+      "size": 1,
+      "id": "Global Climate Change Adaptation"
+    },
+    {
+      "size": 1,
+      "id": "Government of Senegal"
+    },
+    {
+      "size": 2,
+      "id": "Head"
+    },
+    {
+      "size": 1,
+      "id": "Head of Women of Assolucer"
+    },
+    {
+      "size": 2,
+      "id": "IPAR"
+    },
+    {
+      "size": 1,
+      "id": "ITA"
+    },
+    {
+      "size": 1,
+      "id": "KAMEX"
+    },
+    {
+      "size": 2,
+      "id": "KASEC"
+    },
+    {
+      "size": 2,
+      "id": "Kaffrine"
+    },
+    {
+      "size": 1,
+      "id": "Kar Yalla Gueye"
+    },
+    {
+      "size": 1,
+      "id": "Keur Samba Guèye"
+    },
+    {
+      "size": 1,
+      "id": "Khar Yalla Guèye"
+    },
+    {
+      "size": 2,
+      "id": "Kissal Patim"
+    },
+    {
+      "size": 1,
+      "id": "Le Chemin du Bon Riz"
+    },
+    {
+      "size": 1,
+      "id": "Li Ci Penc Mi"
+    },
+    {
+      "size": 1,
+      "id": "Locafrique"
+    },
+    {
+      "size": 3,
+      "id": "Louis"
+    },
+    {
+      "size": 2,
+      "id": "M&E"
+    },
+    {
+      "size": 1,
+      "id": "MAER"
+    },
+    {
+      "size": 2,
+      "id": "MCA"
+    },
+    {
+      "size": 2,
+      "id": "MFI"
+    },
+    {
+      "size": 1,
+      "id": "MOU"
+    },
+    {
+      "size": 2,
+      "id": "Manko"
+    },
+    {
+      "size": 1,
+      "id": "Mapsrc"
+    },
+    {
+      "size": 1,
+      "id": "Medina Yora Foula"
+    },
+    {
+      "size": 1,
+      "id": "Millet"
+    },
+    {
+      "size": 2,
+      "id": "Ministry of Commerce"
+    },
+    {
+      "size": 1,
+      "id": "MoU"
+    },
+    {
+      "size": 1,
+      "id": "Multidisciplinary Working Groups of Kolda"
+    },
+    {
+      "size": 1,
+      "id": "NASAN"
+    },
+    {
+      "size": 1,
+      "id": "NGO Winrock International"
+    },
+    {
+      "size": 1,
+      "id": "NRM"
+    },
+    {
+      "size": 25,
+      "id": "Naatal Mbay"
+    },
+    {
+      "size": 1,
+      "id": "National Agency of Normalization"
+    },
+    {
+      "size": 1,
+      "id": "National Program for Rice Self"
+    },
+    {
+      "size": 1,
+      "id": "National Rice Self"
+    },
+    {
+      "size": 1,
+      "id": "Natural Resrc Management"
+    },
+    {
+      "size": 1,
+      "id": "Ndimbal Jaboot"
+    },
+    {
+      "size": 2,
+      "id": "Network of Women Agriculturists of the North"
+    },
+    {
+      "size": 1,
+      "id": "Northern Women's Farmers Network"
+    },
+    {
+      "size": 2,
+      "id": "OCA"
+    },
+    {
+      "size": 1,
+      "id": "OIKO Crédit"
+    },
+    {
+      "size": 1,
+      "id": "PADAER"
+    },
+    {
+      "size": 2,
+      "id": "PADER"
+    },
+    {
+      "size": 1,
+      "id": "PCE"
+    },
+    {
+      "size": 3,
+      "id": "PNAR"
+    },
+    {
+      "size": 1,
+      "id": "POs"
+    },
+    {
+      "size": 1,
+      "id": "PPDC of the World Bank"
+    },
+    {
+      "size": 2,
+      "id": "PPP"
+    },
+    {
+      "size": 1,
+      "id": "PRODAM"
+    },
+    {
+      "size": 1,
+      "id": "PSE"
+    },
+    {
+      "size": 1,
+      "id": "PTS"
+    },
+    {
+      "size": 2,
+      "id": "PUDC"
+    },
+    {
+      "size": 1,
+      "id": "Pencum Bamboug"
+    },
+    {
+      "size": 1,
+      "id": "Private Sector Investments"
+    },
+    {
+      "size": 1,
+      "id": "Quantum GIS"
+    },
+    {
+      "size": 2,
+      "id": "REFAN"
+    },
+    {
+      "size": 1,
+      "id": "RICE"
+    },
+    {
+      "size": 2,
+      "id": "RNCPS"
+    },
+    {
+      "size": 1,
+      "id": "Richard Toll"
+    },
+    {
+      "size": 1,
+      "id": "Riz du Sud"
+    },
+    {
+      "size": 4,
+      "id": "Ross Béthio"
+    },
+    {
+      "size": 1,
+      "id": "SEDAB"
+    },
+    {
+      "size": 4,
+      "id": "SFZ"
+    },
+    {
+      "size": 2,
+      "id": "SODAGRI"
+    },
+    {
+      "size": 1,
+      "id": "SODEFITEX"
+    },
+    {
+      "size": 2,
+      "id": "SRV"
+    },
+    {
+      "size": 1,
+      "id": "SRV Water Unions and Farmer Groups"
+    },
+    {
+      "size": 1,
+      "id": "Saré Bidji"
+    },
+    {
+      "size": 1,
+      "id": "Seed Triennial Plans for Maize"
+    },
+    {
+      "size": 1,
+      "id": "Sen Radio"
+    },
+    {
+      "size": 1,
+      "id": "Senegal Naatal Mbay"
+    },
+    {
+      "size": 1,
+      "id": "Sope Nabi"
+    },
+    {
+      "size": 1,
+      "id": "Sud FM Sen Radio"
+    },
+    {
+      "size": 2,
+      "id": "Symbiose"
+    },
+    {
+      "size": 1,
+      "id": "TFM"
+    },
+    {
+      "size": 1,
+      "id": "TSP"
+    },
+    {
+      "size": 2,
+      "id": "Takku Liguey"
+    },
+    {
+      "size": 1,
+      "id": "Training of Water Union and Farmer Group"
+    },
+    {
+      "size": 1,
+      "id": "UFP"
+    },
+    {
+      "size": 2,
+      "id": "URIS"
+    },
+    {
+      "size": 10,
+      "id": "USAID"
+    },
+    {
+      "size": 1,
+      "id": "USAID Development Exchange Clearinghouse"
+    },
+    {
+      "size": 1,
+      "id": "Union of Women Producers"
+    },
+    {
+      "size": 1,
+      "id": "Union of Women of Pont Gendarme"
+    },
+    {
+      "size": 1,
+      "id": "VC"
+    },
+    {
+      "size": 1,
+      "id": "Value Chains"
+    },
+    {
+      "size": 2,
+      "id": "Wassadou"
+    },
+    {
+      "size": 1,
+      "id": "Women of Assolucer"
+    },
+    {
+      "size": 2,
+      "id": "Women's Union"
+    },
+    {
+      "size": 1,
+      "id": "Yague"
+    },
+    {
+      "size": 1,
+      "id": "ZFS"
+    },
+    {
+      "size": 1,
+      "id": "ZOI"
     }
   ],
   "edges": [
     {
-      "src": "0",
-      "dst": "1",
-      "weight": 1
+      "weight": 1,
+      "src": "ACEP",
+      "dst": "KAMEX"
     },
     {
-      "src": "0",
-      "dst": "2",
-      "weight": 1
+      "weight": 1,
+      "src": "ACEP",
+      "dst": "OIKO Crédit"
     },
     {
-      "src": "1",
-      "dst": "2",
-      "weight": 1
+      "weight": 1,
+      "src": "ACEP",
+      "dst": "Locafrique"
     },
     {
-      "src": "2",
-      "dst": "3",
-      "weight": 1
+      "weight": 1,
+      "src": "ACEP",
+      "dst": "MFI"
+    },
+    {
+      "weight": 1,
+      "src": "ACEP",
+      "dst": "CNCAS"
+    },
+    {
+      "weight": 1,
+      "src": "ACEP",
+      "dst": "MOU"
+    },
+    {
+      "weight": 1,
+      "src": "ACEP",
+      "dst": "National Agency of Normalization"
+    },
+    {
+      "weight": 1,
+      "src": "AD",
+      "dst": "CNCAS"
+    },
+    {
+      "weight": 1,
+      "src": "AD",
+      "dst": "USAID"
+    },
+    {
+      "weight": 1,
+      "src": "AD",
+      "dst": "Global Climate Change Adaptation"
+    },
+    {
+      "weight": 1,
+      "src": "AD",
+      "dst": "GCC"
+    },
+    {
+      "weight": 1,
+      "src": "AMC",
+      "dst": "Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "ANACIM",
+      "dst": "Multidisciplinary Working Groups of Kolda"
+    },
+    {
+      "weight": 1,
+      "src": "ANACIM",
+      "dst": "Medina Yora Foula"
+    },
+    {
+      "weight": 1,
+      "src": "APIX",
+      "dst": "BOS"
+    },
+    {
+      "weight": 1,
+      "src": "APIX",
+      "dst": "PSE"
+    },
+    {
+      "weight": 1,
+      "src": "ASPRODEB",
+      "dst": "Seed Triennial Plans for Maize"
+    },
+    {
+      "weight": 1,
+      "src": "ASPRODEB",
+      "dst": "GLEE"
+    },
+    {
+      "weight": 1,
+      "src": "ASPRODEB",
+      "dst": "Africa Market Systems"
+    },
+    {
+      "weight": 1,
+      "src": "ASPRODEB",
+      "dst": "Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "ASPRODEB",
+      "dst": "DQA"
+    },
+    {
+      "weight": 1,
+      "src": "ASPRODEB",
+      "dst": "Government of Senegal"
+    },
+    {
+      "weight": 1,
+      "src": "ASPRODEB",
+      "dst": "IPAR"
+    },
+    {
+      "weight": 1,
+      "src": "ASPRODEB",
+      "dst": "CNAAS"
+    },
+    {
+      "weight": 1,
+      "src": "ASSOLUCER",
+      "dst": "Ross Béthio"
+    },
+    {
+      "weight": 1,
+      "src": "ASSOLUCER",
+      "dst": "Northern Women's Farmers Network"
+    },
+    {
+      "weight": 1,
+      "src": "ASSOLUCER",
+      "dst": "DBF Agro-Industries"
+    },
+    {
+      "weight": 1,
+      "src": "ASSOLUCER",
+      "dst": "Head"
+    },
+    {
+      "weight": 2,
+      "src": "ASSOLUCER",
+      "dst": "FIARA"
+    },
+    {
+      "weight": 2,
+      "src": "ASSOLUCER",
+      "dst": "Kissal Patim"
+    },
+    {
+      "weight": 2,
+      "src": "ASSOLUCER",
+      "dst": "FEPROBA"
+    },
+    {
+      "weight": 2,
+      "src": "ASSOLUCER",
+      "dst": "Entente Diouloulou"
+    },
+    {
+      "weight": 1,
+      "src": "ASSOLUCER",
+      "dst": "SRV"
+    },
+    {
+      "weight": 1,
+      "src": "Africa Market Systems",
+      "dst": "GLEE"
+    },
+    {
+      "weight": 1,
+      "src": "Agricultural Markets Improved",
+      "dst": "Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "Agricultural Markets Improved",
+      "dst": "Agricultural Productivity Improved"
+    },
+    {
+      "weight": 1,
+      "src": "Agricultural Policy Environment Strengthened",
+      "dst": "Ministry of Commerce"
+    },
+    {
+      "weight": 1,
+      "src": "Agricultural Productivity Improved",
+      "dst": "Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "Al Thiaka",
+      "dst": "Khar Yalla Guèye"
+    },
+    {
+      "weight": 1,
+      "src": "Al Thiaka",
+      "dst": "FPA"
+    },
+    {
+      "weight": 1,
+      "src": "Al Thiaka",
+      "dst": "GIE Takku Liguey"
+    },
+    {
+      "weight": 1,
+      "src": "Al Thiaka",
+      "dst": "GIE de Femmes Productrices de Ross Béthio"
+    },
+    {
+      "weight": 1,
+      "src": "Anambé Basin",
+      "dst": "MFI"
+    },
+    {
+      "weight": 1,
+      "src": "BNDE",
+      "dst": "BRM"
+    },
+    {
+      "weight": 1,
+      "src": "BOS",
+      "dst": "PSE"
+    },
+    {
+      "weight": 1,
+      "src": "Bank",
+      "dst": "MoU"
+    },
+    {
+      "weight": 1,
+      "src": "Bank",
+      "dst": "Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "Blouf Emano",
+      "dst": "ZFS"
+    },
+    {
+      "weight": 2,
+      "src": "Blouf Emano",
+      "dst": "FCFA"
+    },
+    {
+      "weight": 2,
+      "src": "Blouf Emano",
+      "dst": "FEPROBA"
+    },
+    {
+      "weight": 2,
+      "src": "Blouf Emano",
+      "dst": "CNCAS"
+    },
+    {
+      "weight": 1,
+      "src": "Blouf Emano",
+      "dst": "COOPAD"
+    },
+    {
+      "weight": 1,
+      "src": "Blouf Emano",
+      "dst": "Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "Blouf Emano",
+      "dst": "CFA"
+    },
+    {
+      "weight": 1,
+      "src": "Blouf Emano",
+      "dst": "COPEC"
+    },
+    {
+      "weight": 1,
+      "src": "Boundoum",
+      "dst": "CSC"
+    },
+    {
+      "weight": 2,
+      "src": "CCAC",
+      "dst": "RNCPS"
+    },
+    {
+      "weight": 1,
+      "src": "CCAC",
+      "dst": "Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "CFA",
+      "dst": "Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "CFA",
+      "dst": "FCFA"
+    },
+    {
+      "weight": 1,
+      "src": "CFA",
+      "dst": "FEPROBA"
+    },
+    {
+      "weight": 1,
+      "src": "CFA",
+      "dst": "CNCAS"
+    },
+    {
+      "weight": 1,
+      "src": "CFA",
+      "dst": "COPEC"
+    },
+    {
+      "weight": 1,
+      "src": "CFAF",
+      "dst": "VC"
+    },
+    {
+      "weight": 1,
+      "src": "CFAF",
+      "dst": "CNCAS"
+    },
+    {
+      "weight": 1,
+      "src": "CGER",
+      "dst": "FEPROBA"
+    },
+    {
+      "weight": 1,
+      "src": "CGER",
+      "dst": "SODEFITEX"
+    },
+    {
+      "weight": 1,
+      "src": "CINSERE",
+      "dst": "USAID"
+    },
+    {
+      "weight": 1,
+      "src": "CIRIZ",
+      "dst": "TSP"
+    },
+    {
+      "weight": 1,
+      "src": "CLSPs",
+      "dst": "Consolidation Network"
+    },
+    {
+      "weight": 1,
+      "src": "CNAAS",
+      "dst": "IPAR"
+    },
+    {
+      "weight": 1,
+      "src": "CNCAS",
+      "dst": "Kaffrine"
+    },
+    {
+      "weight": 1,
+      "src": "CNCAS",
+      "dst": "KAMEX"
+    },
+    {
+      "weight": 1,
+      "src": "CNCAS",
+      "dst": "OIKO Crédit"
+    },
+    {
+      "weight": 1,
+      "src": "CNCAS",
+      "dst": "Locafrique"
+    },
+    {
+      "weight": 1,
+      "src": "CNCAS",
+      "dst": "MFI"
+    },
+    {
+      "weight": 1,
+      "src": "CNCAS",
+      "dst": "MOU"
+    },
+    {
+      "weight": 1,
+      "src": "CNCAS",
+      "dst": "VC"
+    },
+    {
+      "weight": 1,
+      "src": "CNCAS",
+      "dst": "USAID"
+    },
+    {
+      "weight": 1,
+      "src": "CNCAS",
+      "dst": "Global Climate Change Adaptation"
+    },
+    {
+      "weight": 1,
+      "src": "CNCAS",
+      "dst": "GCC"
+    },
+    {
+      "weight": 1,
+      "src": "CNCAS",
+      "dst": "FPA"
+    },
+    {
+      "weight": 2,
+      "src": "CNCAS",
+      "dst": "SODAGRI"
+    },
+    {
+      "weight": 2,
+      "src": "CNCAS",
+      "dst": "Federation of Producers of the Anambé Basin"
+    },
+    {
+      "weight": 4,
+      "src": "CNCAS",
+      "dst": "FEPROBA"
+    },
+    {
+      "weight": 1,
+      "src": "CNCAS",
+      "dst": "ZFS"
+    },
+    {
+      "weight": 2,
+      "src": "CNCAS",
+      "dst": "FCFA"
+    },
+    {
+      "weight": 1,
+      "src": "CNCAS",
+      "dst": "COOPAD"
+    },
+    {
+      "weight": 1,
+      "src": "CNCAS",
+      "dst": "Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "CNCAS",
+      "dst": "COPEC"
+    },
+    {
+      "weight": 1,
+      "src": "CNT Suarl",
+      "dst": "Union of Women of Pont Gendarme"
+    },
+    {
+      "weight": 1,
+      "src": "CNT Suarl",
+      "dst": "Union of Women Producers"
+    },
+    {
+      "weight": 1,
+      "src": "CNT Suarl",
+      "dst": "Ross Béthio"
+    },
+    {
+      "weight": 1,
+      "src": "CNT Suarl",
+      "dst": "Richard Toll"
+    },
+    {
+      "weight": 1,
+      "src": "CNT Suarl",
+      "dst": "GIE Malal"
+    },
+    {
+      "weight": 1,
+      "src": "CNT Suarl",
+      "dst": "DBF Agro-Industries"
+    },
+    {
+      "weight": 1,
+      "src": "CNT Suarl",
+      "dst": "GIE Thiaytou"
+    },
+    {
+      "weight": 1,
+      "src": "CNT Suarl",
+      "dst": "Sope Nabi"
+    },
+    {
+      "weight": 1,
+      "src": "CNT Suarl",
+      "dst": "Diama"
+    },
+    {
+      "weight": 1,
+      "src": "COOPAD",
+      "dst": "ZFS"
+    },
+    {
+      "weight": 1,
+      "src": "COOPAD",
+      "dst": "FCFA"
+    },
+    {
+      "weight": 1,
+      "src": "COOPAD",
+      "dst": "FEPROBA"
+    },
+    {
+      "weight": 1,
+      "src": "COPEC",
+      "dst": "Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "COPEC",
+      "dst": "FCFA"
+    },
+    {
+      "weight": 1,
+      "src": "COPEC",
+      "dst": "FEPROBA"
+    },
+    {
+      "weight": 1,
+      "src": "CSC",
+      "dst": "MCA"
+    },
+    {
+      "weight": 1,
+      "src": "Conservation Farming",
+      "dst": "Millet"
+    },
+    {
+      "weight": 1,
+      "src": "Conservation Farming",
+      "dst": "SFZ"
+    },
+    {
+      "weight": 1,
+      "src": "Consolidation Networks",
+      "dst": "OCA"
+    },
+    {
+      "weight": 1,
+      "src": "Consolidation Networks",
+      "dst": "FPA"
+    },
+    {
+      "weight": 3,
+      "src": "DBF Agro-Industries",
+      "dst": "Ross Béthio"
+    },
+    {
+      "weight": 1,
+      "src": "DBF Agro-Industries",
+      "dst": "Northern Women's Farmers Network"
+    },
+    {
+      "weight": 2,
+      "src": "DBF Agro-Industries",
+      "dst": "Head"
+    },
+    {
+      "weight": 1,
+      "src": "DBF Agro-Industries",
+      "dst": "Women's Union"
+    },
+    {
+      "weight": 1,
+      "src": "DBF Agro-Industries",
+      "dst": "Network of Women Agriculturists of the North"
+    },
+    {
+      "weight": 1,
+      "src": "DBF Agro-Industries",
+      "dst": "REFAN"
+    },
+    {
+      "weight": 1,
+      "src": "DBF Agro-Industries",
+      "dst": "Women of Assolucer"
+    },
+    {
+      "weight": 1,
+      "src": "DBF Agro-Industries",
+      "dst": "FIARA"
+    },
+    {
+      "weight": 1,
+      "src": "DBF Agro-Industries",
+      "dst": "Union of Women of Pont Gendarme"
+    },
+    {
+      "weight": 1,
+      "src": "DBF Agro-Industries",
+      "dst": "Union of Women Producers"
+    },
+    {
+      "weight": 1,
+      "src": "DBF Agro-Industries",
+      "dst": "Richard Toll"
+    },
+    {
+      "weight": 1,
+      "src": "DBF Agro-Industries",
+      "dst": "GIE Malal"
+    },
+    {
+      "weight": 1,
+      "src": "DBF Agro-Industries",
+      "dst": "GIE Thiaytou"
+    },
+    {
+      "weight": 1,
+      "src": "DBF Agro-Industries",
+      "dst": "Sope Nabi"
+    },
+    {
+      "weight": 1,
+      "src": "DBF Agro-Industries",
+      "dst": "Diama"
+    },
+    {
+      "weight": 1,
+      "src": "DDL",
+      "dst": "Economic Empowerment Global Learning Forum"
+    },
+    {
+      "weight": 1,
+      "src": "DQA",
+      "dst": "Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "DRDR",
+      "dst": "URIS"
+    },
+    {
+      "weight": 1,
+      "src": "DRDR",
+      "dst": "KASEC"
+    },
+    {
+      "weight": 1,
+      "src": "DRDR",
+      "dst": "Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "Department of Internal Trade",
+      "dst": "Ministry of Commerce"
+    },
+    {
+      "weight": 1,
+      "src": "Diama",
+      "dst": "Union of Women of Pont Gendarme"
+    },
+    {
+      "weight": 1,
+      "src": "Diama",
+      "dst": "Union of Women Producers"
+    },
+    {
+      "weight": 1,
+      "src": "Diama",
+      "dst": "Ross Béthio"
+    },
+    {
+      "weight": 1,
+      "src": "Diama",
+      "dst": "Richard Toll"
+    },
+    {
+      "weight": 1,
+      "src": "Diama",
+      "dst": "GIE Malal"
+    },
+    {
+      "weight": 1,
+      "src": "Diama",
+      "dst": "GIE Thiaytou"
+    },
+    {
+      "weight": 1,
+      "src": "Diama",
+      "dst": "Sope Nabi"
+    },
+    {
+      "weight": 1,
+      "src": "Dimbal Jaboot",
+      "dst": "Manko"
+    },
+    {
+      "weight": 1,
+      "src": "Dimbal Jaboot",
+      "dst": "PUDC"
+    },
+    {
+      "weight": 1,
+      "src": "Déggé Saf Sap Network",
+      "dst": "USAID"
+    },
+    {
+      "weight": 2,
+      "src": "Entente Diouloulou",
+      "dst": "FIARA"
+    },
+    {
+      "weight": 2,
+      "src": "Entente Diouloulou",
+      "dst": "Kissal Patim"
+    },
+    {
+      "weight": 2,
+      "src": "Entente Diouloulou",
+      "dst": "FEPROBA"
+    },
+    {
+      "weight": 1,
+      "src": "Entente Diouloulou",
+      "dst": "SRV"
+    },
+    {
+      "weight": 1,
+      "src": "FCFA",
+      "dst": "ZFS"
+    },
+    {
+      "weight": 2,
+      "src": "FCFA",
+      "dst": "FEPROBA"
+    },
+    {
+      "weight": 1,
+      "src": "FCFA",
+      "dst": "Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "FEPROBA",
+      "dst": "SODEFITEX"
+    },
+    {
+      "weight": 2,
+      "src": "FEPROBA",
+      "dst": "SODAGRI"
+    },
+    {
+      "weight": 2,
+      "src": "FEPROBA",
+      "dst": "Federation of Producers of the Anambé Basin"
+    },
+    {
+      "weight": 2,
+      "src": "FEPROBA",
+      "dst": "FIARA"
+    },
+    {
+      "weight": 2,
+      "src": "FEPROBA",
+      "dst": "Kissal Patim"
+    },
+    {
+      "weight": 1,
+      "src": "FEPROBA",
+      "dst": "ZFS"
+    },
+    {
+      "weight": 1,
+      "src": "FEPROBA",
+      "dst": "SRV"
+    },
+    {
+      "weight": 1,
+      "src": "FEPROBA",
+      "dst": "Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "FIARA",
+      "dst": "Senegal Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "FIARA",
+      "dst": "FIDAK"
+    },
+    {
+      "weight": 2,
+      "src": "FIARA",
+      "dst": "Women's Union"
+    },
+    {
+      "weight": 2,
+      "src": "FIARA",
+      "dst": "Ross Béthio"
+    },
+    {
+      "weight": 2,
+      "src": "FIARA",
+      "dst": "Network of Women Agriculturists of the North"
+    },
+    {
+      "weight": 2,
+      "src": "FIARA",
+      "dst": "REFAN"
+    },
+    {
+      "weight": 1,
+      "src": "FIARA",
+      "dst": "Head of Women of Assolucer"
+    },
+    {
+      "weight": 1,
+      "src": "FIARA",
+      "dst": "Head"
+    },
+    {
+      "weight": 1,
+      "src": "FIARA",
+      "dst": "Women of Assolucer"
+    },
+    {
+      "weight": 2,
+      "src": "FIARA",
+      "dst": "SRV"
+    },
+    {
+      "weight": 1,
+      "src": "FIARA",
+      "dst": "SFZ"
+    },
+    {
+      "weight": 1,
+      "src": "FIARA",
+      "dst": "National Program for Rice Self"
+    },
+    {
+      "weight": 2,
+      "src": "FIARA",
+      "dst": "Kissal Patim"
+    },
+    {
+      "weight": 3,
+      "src": "FIARA",
+      "dst": "Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "FIARA",
+      "dst": "GIE Yoonu Toll"
+    },
+    {
+      "weight": 1,
+      "src": "FIARA",
+      "dst": "PNAR"
+    },
+    {
+      "weight": 1,
+      "src": "FIARA",
+      "dst": "National Rice Self"
+    },
+    {
+      "weight": 1,
+      "src": "FIDAK",
+      "dst": "Senegal Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "FPA",
+      "dst": "Kar Yalla Gueye"
+    },
+    {
+      "weight": 2,
+      "src": "FPA",
+      "dst": "GIE Takku Liguey"
+    },
+    {
+      "weight": 1,
+      "src": "FPA",
+      "dst": "GIE al Thiaka"
+    },
+    {
+      "weight": 1,
+      "src": "FPA",
+      "dst": "UFP"
+    },
+    {
+      "weight": 1,
+      "src": "FPA",
+      "dst": "OCA"
+    },
+    {
+      "weight": 1,
+      "src": "FPA",
+      "dst": "Khar Yalla Guèye"
+    },
+    {
+      "weight": 1,
+      "src": "FPA",
+      "dst": "GIE de Femmes Productrices de Ross Béthio"
+    },
+    {
+      "weight": 1,
+      "src": "FTF Senegal",
+      "dst": "Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "FTF Senegal",
+      "dst": "USAID"
+    },
+    {
+      "weight": 1,
+      "src": "FTF Senegal",
+      "dst": "PCE"
+    },
+    {
+      "weight": 2,
+      "src": "Federation of Producers of the Anambé Basin",
+      "dst": "SODAGRI"
+    },
+    {
+      "weight": 1,
+      "src": "Futurs Médias",
+      "dst": "Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "Futurs Médias",
+      "dst": "Li Ci Penc Mi"
+    },
+    {
+      "weight": 1,
+      "src": "Futurs Médias",
+      "dst": "TFM"
+    },
+    {
+      "weight": 1,
+      "src": "GCC",
+      "dst": "USAID"
+    },
+    {
+      "weight": 1,
+      "src": "GCC",
+      "dst": "Global Climate Change Adaptation"
+    },
+    {
+      "weight": 1,
+      "src": "GIE Malal",
+      "dst": "Union of Women of Pont Gendarme"
+    },
+    {
+      "weight": 1,
+      "src": "GIE Malal",
+      "dst": "Union of Women Producers"
+    },
+    {
+      "weight": 1,
+      "src": "GIE Malal",
+      "dst": "Ross Béthio"
+    },
+    {
+      "weight": 1,
+      "src": "GIE Malal",
+      "dst": "Richard Toll"
+    },
+    {
+      "weight": 1,
+      "src": "GIE Malal",
+      "dst": "GIE Thiaytou"
+    },
+    {
+      "weight": 1,
+      "src": "GIE Malal",
+      "dst": "Sope Nabi"
+    },
+    {
+      "weight": 1,
+      "src": "GIE Takku Liguey",
+      "dst": "Kar Yalla Gueye"
+    },
+    {
+      "weight": 1,
+      "src": "GIE Takku Liguey",
+      "dst": "GIE al Thiaka"
+    },
+    {
+      "weight": 1,
+      "src": "GIE Takku Liguey",
+      "dst": "UFP"
+    },
+    {
+      "weight": 1,
+      "src": "GIE Takku Liguey",
+      "dst": "Khar Yalla Guèye"
+    },
+    {
+      "weight": 1,
+      "src": "GIE Takku Liguey",
+      "dst": "GIE de Femmes Productrices de Ross Béthio"
+    },
+    {
+      "weight": 1,
+      "src": "GIE Thiaytou",
+      "dst": "Union of Women of Pont Gendarme"
+    },
+    {
+      "weight": 1,
+      "src": "GIE Thiaytou",
+      "dst": "Union of Women Producers"
+    },
+    {
+      "weight": 1,
+      "src": "GIE Thiaytou",
+      "dst": "Ross Béthio"
+    },
+    {
+      "weight": 1,
+      "src": "GIE Thiaytou",
+      "dst": "Richard Toll"
+    },
+    {
+      "weight": 1,
+      "src": "GIE Thiaytou",
+      "dst": "Sope Nabi"
+    },
+    {
+      "weight": 1,
+      "src": "GIE Yoonu Toll",
+      "dst": "Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "GIE Yoonu Toll",
+      "dst": "PPP"
+    },
+    {
+      "weight": 1,
+      "src": "GIE al Thiaka",
+      "dst": "Kar Yalla Gueye"
+    },
+    {
+      "weight": 1,
+      "src": "GIE al Thiaka",
+      "dst": "UFP"
+    },
+    {
+      "weight": 1,
+      "src": "GIE de Femmes Productrices de Ross Béthio",
+      "dst": "Khar Yalla Guèye"
+    },
+    {
+      "weight": 1,
+      "src": "GLEE",
+      "dst": "NASAN"
+    },
+    {
+      "weight": 1,
+      "src": "GLEE",
+      "dst": "USAID"
+    },
+    {
+      "weight": 1,
+      "src": "GOS",
+      "dst": "USAID"
+    },
+    {
+      "weight": 1,
+      "src": "GOS",
+      "dst": "M&E"
+    },
+    {
+      "weight": 1,
+      "src": "Global Climate Change Adaptation",
+      "dst": "USAID"
+    },
+    {
+      "weight": 2,
+      "src": "Head",
+      "dst": "Ross Béthio"
+    },
+    {
+      "weight": 1,
+      "src": "Head",
+      "dst": "Northern Women's Farmers Network"
+    },
+    {
+      "weight": 1,
+      "src": "Head",
+      "dst": "Women's Union"
+    },
+    {
+      "weight": 1,
+      "src": "Head",
+      "dst": "Network of Women Agriculturists of the North"
+    },
+    {
+      "weight": 1,
+      "src": "Head",
+      "dst": "REFAN"
+    },
+    {
+      "weight": 1,
+      "src": "Head",
+      "dst": "Women of Assolucer"
+    },
+    {
+      "weight": 1,
+      "src": "Head of Women of Assolucer",
+      "dst": "Women's Union"
+    },
+    {
+      "weight": 1,
+      "src": "Head of Women of Assolucer",
+      "dst": "Ross Béthio"
+    },
+    {
+      "weight": 1,
+      "src": "Head of Women of Assolucer",
+      "dst": "Network of Women Agriculturists of the North"
+    },
+    {
+      "weight": 1,
+      "src": "Head of Women of Assolucer",
+      "dst": "REFAN"
+    },
+    {
+      "weight": 1,
+      "src": "KAMEX",
+      "dst": "OIKO Crédit"
+    },
+    {
+      "weight": 1,
+      "src": "KAMEX",
+      "dst": "Locafrique"
+    },
+    {
+      "weight": 1,
+      "src": "KAMEX",
+      "dst": "MFI"
+    },
+    {
+      "weight": 1,
+      "src": "KAMEX",
+      "dst": "MOU"
+    },
+    {
+      "weight": 1,
+      "src": "KASEC",
+      "dst": "SEDAB"
+    },
+    {
+      "weight": 1,
+      "src": "Kaffrine",
+      "dst": "Louis"
+    },
+    {
+      "weight": 1,
+      "src": "Kar Yalla Gueye",
+      "dst": "UFP"
+    },
+    {
+      "weight": 1,
+      "src": "Keur Samba Guèye",
+      "dst": "Pencum Bamboug"
+    },
+    {
+      "weight": 1,
+      "src": "Kissal Patim",
+      "dst": "SRV"
+    },
+    {
+      "weight": 1,
+      "src": "Li Ci Penc Mi",
+      "dst": "Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "Li Ci Penc Mi",
+      "dst": "TFM"
+    },
+    {
+      "weight": 1,
+      "src": "Locafrique",
+      "dst": "OIKO Crédit"
+    },
+    {
+      "weight": 1,
+      "src": "Locafrique",
+      "dst": "MFI"
+    },
+    {
+      "weight": 1,
+      "src": "Locafrique",
+      "dst": "MOU"
+    },
+    {
+      "weight": 2,
+      "src": "Louis",
+      "dst": "Symbiose"
+    },
+    {
+      "weight": 1,
+      "src": "M&E",
+      "dst": "USAID"
+    },
+    {
+      "weight": 1,
+      "src": "MAER",
+      "dst": "Value Chains"
+    },
+    {
+      "weight": 1,
+      "src": "MFI",
+      "dst": "OIKO Crédit"
+    },
+    {
+      "weight": 1,
+      "src": "MFI",
+      "dst": "MOU"
+    },
+    {
+      "weight": 1,
+      "src": "MOU",
+      "dst": "OIKO Crédit"
+    },
+    {
+      "weight": 2,
+      "src": "Manko",
+      "dst": "PUDC"
+    },
+    {
+      "weight": 1,
+      "src": "Medina Yora Foula",
+      "dst": "Multidisciplinary Working Groups of Kolda"
+    },
+    {
+      "weight": 1,
+      "src": "Millet",
+      "dst": "SFZ"
+    },
+    {
+      "weight": 1,
+      "src": "MoU",
+      "dst": "Naatal Mbay"
+    },
+    {
+      "weight": 1,
+      "src": "NASAN",
+      "dst": "USAID"
+    },
+    {
+      "weight": 1,
+      "src": "Naatal Mbay",
+      "dst": "PPP"
+    },
+    {
+      "weight": 1,
+      "src": "Naatal Mbay",
+      "dst": "USAID"
+    },
+    {
+      "weight": 1,
+      "src": "Naatal Mbay",
+      "dst": "PCE"
+    },
+    {
+      "weight": 2,
+      "src": "Naatal Mbay",
+      "dst": "PNAR"
+    },
+    {
+      "weight": 1,
+      "src": "Naatal Mbay",
+      "dst": "TFM"
+    },
+    {
+      "weight": 1,
+      "src": "Naatal Mbay",
+      "dst": "RNCPS"
+    },
+    {
+      "weight": 1,
+      "src": "Naatal Mbay",
+      "dst": "National Rice Self"
+    },
+    {
+      "weight": 1,
+      "src": "Naatal Mbay",
+      "dst": "SFZ"
+    },
+    {
+      "weight": 1,
+      "src": "National Program for Rice Self",
+      "dst": "SRV"
+    },
+    {
+      "weight": 1,
+      "src": "National Program for Rice Self",
+      "dst": "SFZ"
+    },
+    {
+      "weight": 1,
+      "src": "National Rice Self",
+      "dst": "PNAR"
+    },
+    {
+      "weight": 1,
+      "src": "Ndimbal Jaboot",
+      "dst": "Saré Bidji"
+    },
+    {
+      "weight": 1,
+      "src": "Ndimbal Jaboot",
+      "dst": "PADER"
+    },
+    {
+      "weight": 1,
+      "src": "Ndimbal Jaboot",
+      "dst": "PNAR"
+    },
+    {
+      "weight": 2,
+      "src": "Network of Women Agriculturists of the North",
+      "dst": "Women's Union"
+    },
+    {
+      "weight": 2,
+      "src": "Network of Women Agriculturists of the North",
+      "dst": "Ross Béthio"
+    },
+    {
+      "weight": 2,
+      "src": "Network of Women Agriculturists of the North",
+      "dst": "REFAN"
+    },
+    {
+      "weight": 1,
+      "src": "Network of Women Agriculturists of the North",
+      "dst": "Women of Assolucer"
+    },
+    {
+      "weight": 1,
+      "src": "Northern Women's Farmers Network",
+      "dst": "Ross Béthio"
+    },
+    {
+      "weight": 1,
+      "src": "OCA",
+      "dst": "POs"
+    },
+    {
+      "weight": 1,
+      "src": "PADAER",
+      "dst": "PTS"
+    },
+    {
+      "weight": 1,
+      "src": "PADAER",
+      "dst": "PRODAM"
+    },
+    {
+      "weight": 1,
+      "src": "PADAER",
+      "dst": "PPDC of the World Bank"
+    },
+    {
+      "weight": 1,
+      "src": "PADER",
+      "dst": "USAID"
+    },
+    {
+      "weight": 1,
+      "src": "PADER",
+      "dst": "Saré Bidji"
+    },
+    {
+      "weight": 1,
+      "src": "PADER",
+      "dst": "PNAR"
+    },
+    {
+      "weight": 1,
+      "src": "PCE",
+      "dst": "USAID"
+    },
+    {
+      "weight": 1,
+      "src": "PNAR",
+      "dst": "Saré Bidji"
+    },
+    {
+      "weight": 1,
+      "src": "PPDC of the World Bank",
+      "dst": "PTS"
+    },
+    {
+      "weight": 1,
+      "src": "PPDC of the World Bank",
+      "dst": "PRODAM"
+    },
+    {
+      "weight": 1,
+      "src": "PRODAM",
+      "dst": "PTS"
+    },
+    {
+      "weight": 1,
+      "src": "Quantum GIS",
+      "dst": "USAID"
+    },
+    {
+      "weight": 2,
+      "src": "REFAN",
+      "dst": "Women's Union"
+    },
+    {
+      "weight": 2,
+      "src": "REFAN",
+      "dst": "Ross Béthio"
+    },
+    {
+      "weight": 1,
+      "src": "REFAN",
+      "dst": "Women of Assolucer"
+    },
+    {
+      "weight": 1,
+      "src": "Richard Toll",
+      "dst": "Union of Women of Pont Gendarme"
+    },
+    {
+      "weight": 1,
+      "src": "Richard Toll",
+      "dst": "Union of Women Producers"
+    },
+    {
+      "weight": 1,
+      "src": "Richard Toll",
+      "dst": "Ross Béthio"
+    },
+    {
+      "weight": 1,
+      "src": "Richard Toll",
+      "dst": "Sope Nabi"
+    },
+    {
+      "weight": 2,
+      "src": "Ross Béthio",
+      "dst": "Women's Union"
+    },
+    {
+      "weight": 1,
+      "src": "Ross Béthio",
+      "dst": "Women of Assolucer"
+    },
+    {
+      "weight": 1,
+      "src": "Ross Béthio",
+      "dst": "Union of Women of Pont Gendarme"
+    },
+    {
+      "weight": 1,
+      "src": "Ross Béthio",
+      "dst": "Union of Women Producers"
+    },
+    {
+      "weight": 1,
+      "src": "Ross Béthio",
+      "dst": "Sope Nabi"
+    },
+    {
+      "weight": 1,
+      "src": "SFZ",
+      "dst": "SRV"
+    },
+    {
+      "weight": 1,
+      "src": "Sope Nabi",
+      "dst": "Union of Women of Pont Gendarme"
+    },
+    {
+      "weight": 1,
+      "src": "Sope Nabi",
+      "dst": "Union of Women Producers"
+    },
+    {
+      "weight": 1,
+      "src": "Union of Women Producers",
+      "dst": "Union of Women of Pont Gendarme"
+    },
+    {
+      "weight": 1,
+      "src": "Women of Assolucer",
+      "dst": "Women's Union"
     }
   ]
 }

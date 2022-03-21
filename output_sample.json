@@ -1,0 +1,25 @@
+[ {
+  "concept" : {
+    "text" : "node3",
+    "id" : "2"
+  },
+  "saliency" : 0.3667096488104522
+}, {
+  "concept" : {
+    "text" : "node1",
+    "id" : "0"
+  },
+  "saliency" : 0.2459349312644232
+}, {
+  "concept" : {
+    "text" : "node2",
+    "id" : "1"
+  },
+  "saliency" : 0.2459349312644232
+}, {
+  "concept" : {
+    "text" : "node4",
+    "id" : "3"
+  },
+  "saliency" : 0.14142048866070128
+} ]
