@@ -1,1 +1,2170 @@
-{}
+{
+    "nodes": [
+        {
+            "id": 0,
+            "text": "ACEP"
+        },
+        {
+            "id": 1,
+            "text": "AD"
+        },
+        {
+            "id": 2,
+            "text": "AMC"
+        },
+        {
+            "id": 3,
+            "text": "ANACIM"
+        },
+        {
+            "id": 4,
+            "text": "APIX"
+        },
+        {
+            "id": 5,
+            "text": "ASPRODEB"
+        },
+        {
+            "id": 6,
+            "text": "ASSOLUCER"
+        },
+        {
+            "id": 7,
+            "text": "Africa Market Systems"
+        },
+        {
+            "id": 8,
+            "text": "Agricultural Markets Improved"
+        },
+        {
+            "id": 9,
+            "text": "Agricultural Policy Environment Strengthened"
+        },
+        {
+            "id": 10,
+            "text": "Agricultural Productivity Improved"
+        },
+        {
+            "id": 11,
+            "text": "Agriculture Insurance"
+        },
+        {
+            "id": 12,
+            "text": "Al Thiaka"
+        },
+        {
+            "id": 13,
+            "text": "Anamb\u00e9 Basin"
+        },
+        {
+            "id": 14,
+            "text": "BNDE"
+        },
+        {
+            "id": 15,
+            "text": "BOS"
+        },
+        {
+            "id": 16,
+            "text": "BRM"
+        },
+        {
+            "id": 17,
+            "text": "Bank"
+        },
+        {
+            "id": 18,
+            "text": "Blouf Emano"
+        },
+        {
+            "id": 19,
+            "text": "Boundoum"
+        },
+        {
+            "id": 20,
+            "text": "CCAC"
+        },
+        {
+            "id": 21,
+            "text": "CFA"
+        },
+        {
+            "id": 22,
+            "text": "CFAF"
+        },
+        {
+            "id": 23,
+            "text": "CGER"
+        },
+        {
+            "id": 24,
+            "text": "CINSERE"
+        },
+        {
+            "id": 25,
+            "text": "CIRIZ"
+        },
+        {
+            "id": 26,
+            "text": "CLSPs"
+        },
+        {
+            "id": 27,
+            "text": "CNAAS"
+        },
+        {
+            "id": 28,
+            "text": "CNCAS"
+        },
+        {
+            "id": 29,
+            "text": "CNT Suarl"
+        },
+        {
+            "id": 30,
+            "text": "COOPAD"
+        },
+        {
+            "id": 31,
+            "text": "COPEC"
+        },
+        {
+            "id": 32,
+            "text": "CORIS Bank"
+        },
+        {
+            "id": 33,
+            "text": "CSC"
+        },
+        {
+            "id": 34,
+            "text": "CommAgri"
+        },
+        {
+            "id": 35,
+            "text": "Conservation Farming"
+        },
+        {
+            "id": 36,
+            "text": "Consolidation Network"
+        },
+        {
+            "id": 37,
+            "text": "Consolidation Networks"
+        },
+        {
+            "id": 38,
+            "text": "Coumba Nor Thiam SA"
+        },
+        {
+            "id": 39,
+            "text": "DBF Agro-Industries"
+        },
+        {
+            "id": 40,
+            "text": "DDL"
+        },
+        {
+            "id": 41,
+            "text": "DGE"
+        },
+        {
+            "id": 42,
+            "text": "DQA"
+        },
+        {
+            "id": 43,
+            "text": "DRDR"
+        },
+        {
+            "id": 44,
+            "text": "Department of Internal Trade"
+        },
+        {
+            "id": 45,
+            "text": "Diama"
+        },
+        {
+            "id": 46,
+            "text": "Dimbal Jaboot"
+        },
+        {
+            "id": 47,
+            "text": "D\u00e9gg\u00e9 Saf Sap Network"
+        },
+        {
+            "id": 48,
+            "text": "Economic Empowerment Global Learning Forum"
+        },
+        {
+            "id": 49,
+            "text": "Economic Growth Project"
+        },
+        {
+            "id": 50,
+            "text": "Entente Diouloulou"
+        },
+        {
+            "id": 51,
+            "text": "FCFA"
+        },
+        {
+            "id": 52,
+            "text": "FEPROBA"
+        },
+        {
+            "id": 53,
+            "text": "FIARA"
+        },
+        {
+            "id": 54,
+            "text": "FIDAK"
+        },
+        {
+            "id": 55,
+            "text": "FIKA"
+        },
+        {
+            "id": 56,
+            "text": "FPA"
+        },
+        {
+            "id": 57,
+            "text": "FTF"
+        },
+        {
+            "id": 58,
+            "text": "FTF Senegal"
+        },
+        {
+            "id": 59,
+            "text": "Federation of Producers of the Anamb\u00e9 Basin"
+        },
+        {
+            "id": 60,
+            "text": "Feed the Future Senegal Naatal Mbay"
+        },
+        {
+            "id": 61,
+            "text": "Future Senegal Naatal Mbay"
+        },
+        {
+            "id": 62,
+            "text": "Futurs M\u00e9dias"
+        },
+        {
+            "id": 63,
+            "text": "GCC"
+        },
+        {
+            "id": 64,
+            "text": "GIE Malal"
+        },
+        {
+            "id": 65,
+            "text": "GIE Takku Liguey"
+        },
+        {
+            "id": 66,
+            "text": "GIE Thiaytou"
+        },
+        {
+            "id": 67,
+            "text": "GIE Yoonu Toll"
+        },
+        {
+            "id": 68,
+            "text": "GIE al Thiaka"
+        },
+        {
+            "id": 69,
+            "text": "GIE de Femmes Productrices de Ross B\u00e9thio"
+        },
+        {
+            "id": 70,
+            "text": "GLEE"
+        },
+        {
+            "id": 71,
+            "text": "GOS"
+        },
+        {
+            "id": 72,
+            "text": "GTP"
+        },
+        {
+            "id": 73,
+            "text": "Global Climate Change Adaptation"
+        },
+        {
+            "id": 74,
+            "text": "Government of Senegal"
+        },
+        {
+            "id": 75,
+            "text": "Head"
+        },
+        {
+            "id": 76,
+            "text": "Head of Women of Assolucer"
+        },
+        {
+            "id": 77,
+            "text": "IPAR"
+        },
+        {
+            "id": 78,
+            "text": "ITA"
+        },
+        {
+            "id": 79,
+            "text": "KAMEX"
+        },
+        {
+            "id": 80,
+            "text": "KASEC"
+        },
+        {
+            "id": 81,
+            "text": "Kaffrine"
+        },
+        {
+            "id": 82,
+            "text": "Kar Yalla Gueye"
+        },
+        {
+            "id": 83,
+            "text": "Keur Samba Gu\u00e8ye"
+        },
+        {
+            "id": 84,
+            "text": "Khar Yalla Gu\u00e8ye"
+        },
+        {
+            "id": 85,
+            "text": "Kissal Patim"
+        },
+        {
+            "id": 86,
+            "text": "Le Chemin du Bon Riz"
+        },
+        {
+            "id": 87,
+            "text": "Li Ci Penc Mi"
+        },
+        {
+            "id": 88,
+            "text": "Locafrique"
+        },
+        {
+            "id": 89,
+            "text": "Louis"
+        },
+        {
+            "id": 90,
+            "text": "M&E"
+        },
+        {
+            "id": 91,
+            "text": "MAER"
+        },
+        {
+            "id": 92,
+            "text": "MCA"
+        },
+        {
+            "id": 93,
+            "text": "MFI"
+        },
+        {
+            "id": 94,
+            "text": "MOU"
+        },
+        {
+            "id": 95,
+            "text": "Manko"
+        },
+        {
+            "id": 96,
+            "text": "Mapsrc"
+        },
+        {
+            "id": 97,
+            "text": "Medina Yora Foula"
+        },
+        {
+            "id": 98,
+            "text": "Millet"
+        },
+        {
+            "id": 99,
+            "text": "Ministry of Commerce"
+        },
+        {
+            "id": 100,
+            "text": "MoU"
+        },
+        {
+            "id": 101,
+            "text": "Multidisciplinary Working Groups of Kolda"
+        },
+        {
+            "id": 102,
+            "text": "NASAN"
+        },
+        {
+            "id": 103,
+            "text": "NGO Winrock International"
+        },
+        {
+            "id": 104,
+            "text": "NRM"
+        },
+        {
+            "id": 105,
+            "text": "Naatal Mbay"
+        },
+        {
+            "id": 106,
+            "text": "National Agency of Normalization"
+        },
+        {
+            "id": 107,
+            "text": "National Program for Rice Self"
+        },
+        {
+            "id": 108,
+            "text": "National Rice Self"
+        },
+        {
+            "id": 109,
+            "text": "Natural Resrc Management"
+        },
+        {
+            "id": 110,
+            "text": "Ndimbal Jaboot"
+        },
+        {
+            "id": 111,
+            "text": "Network of Women Agriculturists of the North"
+        },
+        {
+            "id": 112,
+            "text": "Northern Women's Farmers Network"
+        },
+        {
+            "id": 113,
+            "text": "OCA"
+        },
+        {
+            "id": 114,
+            "text": "OIKO Cr\u00e9dit"
+        },
+        {
+            "id": 115,
+            "text": "PADAER"
+        },
+        {
+            "id": 116,
+            "text": "PADER"
+        },
+        {
+            "id": 117,
+            "text": "PCE"
+        },
+        {
+            "id": 118,
+            "text": "PNAR"
+        },
+        {
+            "id": 119,
+            "text": "POs"
+        },
+        {
+            "id": 120,
+            "text": "PPDC of the World Bank"
+        },
+        {
+            "id": 121,
+            "text": "PPP"
+        },
+        {
+            "id": 122,
+            "text": "PRODAM"
+        },
+        {
+            "id": 123,
+            "text": "PSE"
+        },
+        {
+            "id": 124,
+            "text": "PTS"
+        },
+        {
+            "id": 125,
+            "text": "PUDC"
+        },
+        {
+            "id": 126,
+            "text": "Pencum Bamboug"
+        },
+        {
+            "id": 127,
+            "text": "Private Sector Investments"
+        },
+        {
+            "id": 128,
+            "text": "Quantum GIS"
+        },
+        {
+            "id": 129,
+            "text": "REFAN"
+        },
+        {
+            "id": 130,
+            "text": "RICE"
+        },
+        {
+            "id": 131,
+            "text": "RNCPS"
+        },
+        {
+            "id": 132,
+            "text": "Richard Toll"
+        },
+        {
+            "id": 133,
+            "text": "Riz du Sud"
+        },
+        {
+            "id": 134,
+            "text": "Ross B\u00e9thio"
+        },
+        {
+            "id": 135,
+            "text": "SEDAB"
+        },
+        {
+            "id": 136,
+            "text": "SFZ"
+        },
+        {
+            "id": 137,
+            "text": "SODAGRI"
+        },
+        {
+            "id": 138,
+            "text": "SODEFITEX"
+        },
+        {
+            "id": 139,
+            "text": "SRV"
+        },
+        {
+            "id": 140,
+            "text": "SRV Water Unions and Farmer Groups"
+        },
+        {
+            "id": 141,
+            "text": "Sar\u00e9 Bidji"
+        },
+        {
+            "id": 142,
+            "text": "Seed Triennial Plans for Maize"
+        },
+        {
+            "id": 143,
+            "text": "Sen Radio"
+        },
+        {
+            "id": 144,
+            "text": "Senegal Naatal Mbay"
+        },
+        {
+            "id": 145,
+            "text": "Sope Nabi"
+        },
+        {
+            "id": 146,
+            "text": "Sud FM Sen Radio"
+        },
+        {
+            "id": 147,
+            "text": "Symbiose"
+        },
+        {
+            "id": 148,
+            "text": "TFM"
+        },
+        {
+            "id": 149,
+            "text": "TSP"
+        },
+        {
+            "id": 150,
+            "text": "Takku Liguey"
+        },
+        {
+            "id": 151,
+            "text": "Training of Water Union and Farmer Group"
+        },
+        {
+            "id": 152,
+            "text": "UFP"
+        },
+        {
+            "id": 153,
+            "text": "URIS"
+        },
+        {
+            "id": 154,
+            "text": "USAID"
+        },
+        {
+            "id": 155,
+            "text": "USAID Development Exchange Clearinghouse"
+        },
+        {
+            "id": 156,
+            "text": "Union of Women Producers"
+        },
+        {
+            "id": 157,
+            "text": "Union of Women of Pont Gendarme"
+        },
+        {
+            "id": 158,
+            "text": "VC"
+        },
+        {
+            "id": 159,
+            "text": "Value Chains"
+        },
+        {
+            "id": 160,
+            "text": "Wassadou"
+        },
+        {
+            "id": 161,
+            "text": "Women of Assolucer"
+        },
+        {
+            "id": 162,
+            "text": "Women's Union"
+        },
+        {
+            "id": 163,
+            "text": "Yague"
+        },
+        {
+            "id": 164,
+            "text": "ZFS"
+        },
+        {
+            "id": 165,
+            "text": "ZOI"
+        }
+    ],
+    "edges": [
+        {
+            "src": 0,
+            "dst": 79,
+            "weight": 1
+        },
+        {
+            "src": 0,
+            "dst": 114,
+            "weight": 1
+        },
+        {
+            "src": 0,
+            "dst": 88,
+            "weight": 1
+        },
+        {
+            "src": 0,
+            "dst": 93,
+            "weight": 1
+        },
+        {
+            "src": 0,
+            "dst": 28,
+            "weight": 1
+        },
+        {
+            "src": 0,
+            "dst": 94,
+            "weight": 1
+        },
+        {
+            "src": 0,
+            "dst": 106,
+            "weight": 1
+        },
+        {
+            "src": 1,
+            "dst": 28,
+            "weight": 1
+        },
+        {
+            "src": 1,
+            "dst": 154,
+            "weight": 1
+        },
+        {
+            "src": 1,
+            "dst": 73,
+            "weight": 1
+        },
+        {
+            "src": 1,
+            "dst": 63,
+            "weight": 1
+        },
+        {
+            "src": 2,
+            "dst": 105,
+            "weight": 1
+        },
+        {
+            "src": 3,
+            "dst": 101,
+            "weight": 1
+        },
+        {
+            "src": 3,
+            "dst": 97,
+            "weight": 1
+        },
+        {
+            "src": 4,
+            "dst": 15,
+            "weight": 1
+        },
+        {
+            "src": 4,
+            "dst": 123,
+            "weight": 1
+        },
+        {
+            "src": 5,
+            "dst": 142,
+            "weight": 1
+        },
+        {
+            "src": 5,
+            "dst": 70,
+            "weight": 1
+        },
+        {
+            "src": 5,
+            "dst": 7,
+            "weight": 1
+        },
+        {
+            "src": 5,
+            "dst": 105,
+            "weight": 1
+        },
+        {
+            "src": 5,
+            "dst": 42,
+            "weight": 1
+        },
+        {
+            "src": 5,
+            "dst": 74,
+            "weight": 1
+        },
+        {
+            "src": 5,
+            "dst": 77,
+            "weight": 1
+        },
+        {
+            "src": 5,
+            "dst": 27,
+            "weight": 1
+        },
+        {
+            "src": 6,
+            "dst": 134,
+            "weight": 1
+        },
+        {
+            "src": 6,
+            "dst": 112,
+            "weight": 1
+        },
+        {
+            "src": 6,
+            "dst": 39,
+            "weight": 1
+        },
+        {
+            "src": 6,
+            "dst": 75,
+            "weight": 1
+        },
+        {
+            "src": 6,
+            "dst": 53,
+            "weight": 2
+        },
+        {
+            "src": 6,
+            "dst": 85,
+            "weight": 2
+        },
+        {
+            "src": 6,
+            "dst": 52,
+            "weight": 2
+        },
+        {
+            "src": 6,
+            "dst": 50,
+            "weight": 2
+        },
+        {
+            "src": 6,
+            "dst": 139,
+            "weight": 1
+        },
+        {
+            "src": 7,
+            "dst": 70,
+            "weight": 1
+        },
+        {
+            "src": 8,
+            "dst": 105,
+            "weight": 1
+        },
+        {
+            "src": 8,
+            "dst": 10,
+            "weight": 1
+        },
+        {
+            "src": 9,
+            "dst": 99,
+            "weight": 1
+        },
+        {
+            "src": 10,
+            "dst": 105,
+            "weight": 1
+        },
+        {
+            "src": 12,
+            "dst": 84,
+            "weight": 1
+        },
+        {
+            "src": 12,
+            "dst": 56,
+            "weight": 1
+        },
+        {
+            "src": 12,
+            "dst": 65,
+            "weight": 1
+        },
+        {
+            "src": 12,
+            "dst": 69,
+            "weight": 1
+        },
+        {
+            "src": 13,
+            "dst": 93,
+            "weight": 1
+        },
+        {
+            "src": 14,
+            "dst": 16,
+            "weight": 1
+        },
+        {
+            "src": 15,
+            "dst": 123,
+            "weight": 1
+        },
+        {
+            "src": 17,
+            "dst": 100,
+            "weight": 1
+        },
+        {
+            "src": 17,
+            "dst": 105,
+            "weight": 1
+        },
+        {
+            "src": 18,
+            "dst": 164,
+            "weight": 1
+        },
+        {
+            "src": 18,
+            "dst": 51,
+            "weight": 2
+        },
+        {
+            "src": 18,
+            "dst": 52,
+            "weight": 2
+        },
+        {
+            "src": 18,
+            "dst": 28,
+            "weight": 2
+        },
+        {
+            "src": 18,
+            "dst": 30,
+            "weight": 1
+        },
+        {
+            "src": 18,
+            "dst": 105,
+            "weight": 1
+        },
+        {
+            "src": 18,
+            "dst": 21,
+            "weight": 1
+        },
+        {
+            "src": 18,
+            "dst": 31,
+            "weight": 1
+        },
+        {
+            "src": 19,
+            "dst": 33,
+            "weight": 1
+        },
+        {
+            "src": 20,
+            "dst": 131,
+            "weight": 2
+        },
+        {
+            "src": 20,
+            "dst": 105,
+            "weight": 1
+        },
+        {
+            "src": 21,
+            "dst": 105,
+            "weight": 1
+        },
+        {
+            "src": 21,
+            "dst": 51,
+            "weight": 1
+        },
+        {
+            "src": 21,
+            "dst": 52,
+            "weight": 1
+        },
+        {
+            "src": 21,
+            "dst": 28,
+            "weight": 1
+        },
+        {
+            "src": 21,
+            "dst": 31,
+            "weight": 1
+        },
+        {
+            "src": 22,
+            "dst": 158,
+            "weight": 1
+        },
+        {
+            "src": 22,
+            "dst": 28,
+            "weight": 1
+        },
+        {
+            "src": 23,
+            "dst": 52,
+            "weight": 1
+        },
+        {
+            "src": 23,
+            "dst": 138,
+            "weight": 1
+        },
+        {
+            "src": 24,
+            "dst": 154,
+            "weight": 1
+        },
+        {
+            "src": 25,
+            "dst": 149,
+            "weight": 1
+        },
+        {
+            "src": 26,
+            "dst": 36,
+            "weight": 1
+        },
+        {
+            "src": 27,
+            "dst": 77,
+            "weight": 1
+        },
+        {
+            "src": 28,
+            "dst": 81,
+            "weight": 1
+        },
+        {
+            "src": 28,
+            "dst": 79,
+            "weight": 1
+        },
+        {
+            "src": 28,
+            "dst": 114,
+            "weight": 1
+        },
+        {
+            "src": 28,
+            "dst": 88,
+            "weight": 1
+        },
+        {
+            "src": 28,
+            "dst": 93,
+            "weight": 1
+        },
+        {
+            "src": 28,
+            "dst": 94,
+            "weight": 1
+        },
+        {
+            "src": 28,
+            "dst": 158,
+            "weight": 1
+        },
+        {
+            "src": 28,
+            "dst": 154,
+            "weight": 1
+        },
+        {
+            "src": 28,
+            "dst": 73,
+            "weight": 1
+        },
+        {
+            "src": 28,
+            "dst": 63,
+            "weight": 1
+        },
+        {
+            "src": 28,
+            "dst": 56,
+            "weight": 1
+        },
+        {
+            "src": 28,
+            "dst": 137,
+            "weight": 2
+        },
+        {
+            "src": 28,
+            "dst": 59,
+            "weight": 2
+        },
+        {
+            "src": 28,
+            "dst": 52,
+            "weight": 4
+        },
+        {
+            "src": 28,
+            "dst": 164,
+            "weight": 1
+        },
+        {
+            "src": 28,
+            "dst": 51,
+            "weight": 2
+        },
+        {
+            "src": 28,
+            "dst": 30,
+            "weight": 1
+        },
+        {
+            "src": 28,
+            "dst": 105,
+            "weight": 1
+        },
+        {
+            "src": 28,
+            "dst": 31,
+            "weight": 1
+        },
+        {
+            "src": 29,
+            "dst": 157,
+            "weight": 1
+        },
+        {
+            "src": 29,
+            "dst": 156,
+            "weight": 1
+        },
+        {
+            "src": 29,
+            "dst": 134,
+            "weight": 1
+        },
+        {
+            "src": 29,
+            "dst": 132,
+            "weight": 1
+        },
+        {
+            "src": 29,
+            "dst": 64,
+            "weight": 1
+        },
+        {
+            "src": 29,
+            "dst": 39,
+            "weight": 1
+        },
+        {
+            "src": 29,
+            "dst": 66,
+            "weight": 1
+        },
+        {
+            "src": 29,
+            "dst": 145,
+            "weight": 1
+        },
+        {
+            "src": 29,
+            "dst": 45,
+            "weight": 1
+        },
+        {
+            "src": 30,
+            "dst": 164,
+            "weight": 1
+        },
+        {
+            "src": 30,
+            "dst": 51,
+            "weight": 1
+        },
+        {
+            "src": 30,
+            "dst": 52,
+            "weight": 1
+        },
+        {
+            "src": 31,
+            "dst": 105,
+            "weight": 1
+        },
+        {
+            "src": 31,
+            "dst": 51,
+            "weight": 1
+        },
+        {
+            "src": 31,
+            "dst": 52,
+            "weight": 1
+        },
+        {
+            "src": 33,
+            "dst": 92,
+            "weight": 1
+        },
+        {
+            "src": 35,
+            "dst": 98,
+            "weight": 1
+        },
+        {
+            "src": 35,
+            "dst": 136,
+            "weight": 1
+        },
+        {
+            "src": 37,
+            "dst": 113,
+            "weight": 1
+        },
+        {
+            "src": 37,
+            "dst": 56,
+            "weight": 1
+        },
+        {
+            "src": 39,
+            "dst": 134,
+            "weight": 3
+        },
+        {
+            "src": 39,
+            "dst": 112,
+            "weight": 1
+        },
+        {
+            "src": 39,
+            "dst": 75,
+            "weight": 2
+        },
+        {
+            "src": 39,
+            "dst": 162,
+            "weight": 1
+        },
+        {
+            "src": 39,
+            "dst": 111,
+            "weight": 1
+        },
+        {
+            "src": 39,
+            "dst": 129,
+            "weight": 1
+        },
+        {
+            "src": 39,
+            "dst": 161,
+            "weight": 1
+        },
+        {
+            "src": 39,
+            "dst": 53,
+            "weight": 1
+        },
+        {
+            "src": 39,
+            "dst": 157,
+            "weight": 1
+        },
+        {
+            "src": 39,
+            "dst": 156,
+            "weight": 1
+        },
+        {
+            "src": 39,
+            "dst": 132,
+            "weight": 1
+        },
+        {
+            "src": 39,
+            "dst": 64,
+            "weight": 1
+        },
+        {
+            "src": 39,
+            "dst": 66,
+            "weight": 1
+        },
+        {
+            "src": 39,
+            "dst": 145,
+            "weight": 1
+        },
+        {
+            "src": 39,
+            "dst": 45,
+            "weight": 1
+        },
+        {
+            "src": 40,
+            "dst": 48,
+            "weight": 1
+        },
+        {
+            "src": 42,
+            "dst": 105,
+            "weight": 1
+        },
+        {
+            "src": 43,
+            "dst": 153,
+            "weight": 1
+        },
+        {
+            "src": 43,
+            "dst": 80,
+            "weight": 1
+        },
+        {
+            "src": 43,
+            "dst": 105,
+            "weight": 1
+        },
+        {
+            "src": 44,
+            "dst": 99,
+            "weight": 1
+        },
+        {
+            "src": 45,
+            "dst": 157,
+            "weight": 1
+        },
+        {
+            "src": 45,
+            "dst": 156,
+            "weight": 1
+        },
+        {
+            "src": 45,
+            "dst": 134,
+            "weight": 1
+        },
+        {
+            "src": 45,
+            "dst": 132,
+            "weight": 1
+        },
+        {
+            "src": 45,
+            "dst": 64,
+            "weight": 1
+        },
+        {
+            "src": 45,
+            "dst": 66,
+            "weight": 1
+        },
+        {
+            "src": 45,
+            "dst": 145,
+            "weight": 1
+        },
+        {
+            "src": 46,
+            "dst": 95,
+            "weight": 1
+        },
+        {
+            "src": 46,
+            "dst": 125,
+            "weight": 1
+        },
+        {
+            "src": 47,
+            "dst": 154,
+            "weight": 1
+        },
+        {
+            "src": 50,
+            "dst": 53,
+            "weight": 2
+        },
+        {
+            "src": 50,
+            "dst": 85,
+            "weight": 2
+        },
+        {
+            "src": 50,
+            "dst": 52,
+            "weight": 2
+        },
+        {
+            "src": 50,
+            "dst": 139,
+            "weight": 1
+        },
+        {
+            "src": 51,
+            "dst": 164,
+            "weight": 1
+        },
+        {
+            "src": 51,
+            "dst": 52,
+            "weight": 2
+        },
+        {
+            "src": 51,
+            "dst": 105,
+            "weight": 1
+        },
+        {
+            "src": 52,
+            "dst": 138,
+            "weight": 1
+        },
+        {
+            "src": 52,
+            "dst": 137,
+            "weight": 2
+        },
+        {
+            "src": 52,
+            "dst": 59,
+            "weight": 2
+        },
+        {
+            "src": 52,
+            "dst": 53,
+            "weight": 2
+        },
+        {
+            "src": 52,
+            "dst": 85,
+            "weight": 2
+        },
+        {
+            "src": 52,
+            "dst": 164,
+            "weight": 1
+        },
+        {
+            "src": 52,
+            "dst": 139,
+            "weight": 1
+        },
+        {
+            "src": 52,
+            "dst": 105,
+            "weight": 1
+        },
+        {
+            "src": 53,
+            "dst": 144,
+            "weight": 1
+        },
+        {
+            "src": 53,
+            "dst": 54,
+            "weight": 1
+        },
+        {
+            "src": 53,
+            "dst": 162,
+            "weight": 2
+        },
+        {
+            "src": 53,
+            "dst": 134,
+            "weight": 2
+        },
+        {
+            "src": 53,
+            "dst": 111,
+            "weight": 2
+        },
+        {
+            "src": 53,
+            "dst": 129,
+            "weight": 2
+        },
+        {
+            "src": 53,
+            "dst": 76,
+            "weight": 1
+        },
+        {
+            "src": 53,
+            "dst": 75,
+            "weight": 1
+        },
+        {
+            "src": 53,
+            "dst": 161,
+            "weight": 1
+        },
+        {
+            "src": 53,
+            "dst": 139,
+            "weight": 2
+        },
+        {
+            "src": 53,
+            "dst": 136,
+            "weight": 1
+        },
+        {
+            "src": 53,
+            "dst": 107,
+            "weight": 1
+        },
+        {
+            "src": 53,
+            "dst": 85,
+            "weight": 2
+        },
+        {
+            "src": 53,
+            "dst": 105,
+            "weight": 3
+        },
+        {
+            "src": 53,
+            "dst": 67,
+            "weight": 1
+        },
+        {
+            "src": 53,
+            "dst": 118,
+            "weight": 1
+        },
+        {
+            "src": 53,
+            "dst": 108,
+            "weight": 1
+        },
+        {
+            "src": 54,
+            "dst": 144,
+            "weight": 1
+        },
+        {
+            "src": 56,
+            "dst": 82,
+            "weight": 1
+        },
+        {
+            "src": 56,
+            "dst": 65,
+            "weight": 2
+        },
+        {
+            "src": 56,
+            "dst": 68,
+            "weight": 1
+        },
+        {
+            "src": 56,
+            "dst": 152,
+            "weight": 1
+        },
+        {
+            "src": 56,
+            "dst": 113,
+            "weight": 1
+        },
+        {
+            "src": 56,
+            "dst": 84,
+            "weight": 1
+        },
+        {
+            "src": 56,
+            "dst": 69,
+            "weight": 1
+        },
+        {
+            "src": 58,
+            "dst": 105,
+            "weight": 1
+        },
+        {
+            "src": 58,
+            "dst": 154,
+            "weight": 1
+        },
+        {
+            "src": 58,
+            "dst": 117,
+            "weight": 1
+        },
+        {
+            "src": 59,
+            "dst": 137,
+            "weight": 2
+        },
+        {
+            "src": 62,
+            "dst": 105,
+            "weight": 1
+        },
+        {
+            "src": 62,
+            "dst": 87,
+            "weight": 1
+        },
+        {
+            "src": 62,
+            "dst": 148,
+            "weight": 1
+        },
+        {
+            "src": 63,
+            "dst": 154,
+            "weight": 1
+        },
+        {
+            "src": 63,
+            "dst": 73,
+            "weight": 1
+        },
+        {
+            "src": 64,
+            "dst": 157,
+            "weight": 1
+        },
+        {
+            "src": 64,
+            "dst": 156,
+            "weight": 1
+        },
+        {
+            "src": 64,
+            "dst": 134,
+            "weight": 1
+        },
+        {
+            "src": 64,
+            "dst": 132,
+            "weight": 1
+        },
+        {
+            "src": 64,
+            "dst": 66,
+            "weight": 1
+        },
+        {
+            "src": 64,
+            "dst": 145,
+            "weight": 1
+        },
+        {
+            "src": 65,
+            "dst": 82,
+            "weight": 1
+        },
+        {
+            "src": 65,
+            "dst": 68,
+            "weight": 1
+        },
+        {
+            "src": 65,
+            "dst": 152,
+            "weight": 1
+        },
+        {
+            "src": 65,
+            "dst": 84,
+            "weight": 1
+        },
+        {
+            "src": 65,
+            "dst": 69,
+            "weight": 1
+        },
+        {
+            "src": 66,
+            "dst": 157,
+            "weight": 1
+        },
+        {
+            "src": 66,
+            "dst": 156,
+            "weight": 1
+        },
+        {
+            "src": 66,
+            "dst": 134,
+            "weight": 1
+        },
+        {
+            "src": 66,
+            "dst": 132,
+            "weight": 1
+        },
+        {
+            "src": 66,
+            "dst": 145,
+            "weight": 1
+        },
+        {
+            "src": 67,
+            "dst": 105,
+            "weight": 1
+        },
+        {
+            "src": 67,
+            "dst": 121,
+            "weight": 1
+        },
+        {
+            "src": 68,
+            "dst": 82,
+            "weight": 1
+        },
+        {
+            "src": 68,
+            "dst": 152,
+            "weight": 1
+        },
+        {
+            "src": 69,
+            "dst": 84,
+            "weight": 1
+        },
+        {
+            "src": 70,
+            "dst": 102,
+            "weight": 1
+        },
+        {
+            "src": 70,
+            "dst": 154,
+            "weight": 1
+        },
+        {
+            "src": 71,
+            "dst": 154,
+            "weight": 1
+        },
+        {
+            "src": 71,
+            "dst": 90,
+            "weight": 1
+        },
+        {
+            "src": 73,
+            "dst": 154,
+            "weight": 1
+        },
+        {
+            "src": 75,
+            "dst": 134,
+            "weight": 2
+        },
+        {
+            "src": 75,
+            "dst": 112,
+            "weight": 1
+        },
+        {
+            "src": 75,
+            "dst": 162,
+            "weight": 1
+        },
+        {
+            "src": 75,
+            "dst": 111,
+            "weight": 1
+        },
+        {
+            "src": 75,
+            "dst": 129,
+            "weight": 1
+        },
+        {
+            "src": 75,
+            "dst": 161,
+            "weight": 1
+        },
+        {
+            "src": 76,
+            "dst": 162,
+            "weight": 1
+        },
+        {
+            "src": 76,
+            "dst": 134,
+            "weight": 1
+        },
+        {
+            "src": 76,
+            "dst": 111,
+            "weight": 1
+        },
+        {
+            "src": 76,
+            "dst": 129,
+            "weight": 1
+        },
+        {
+            "src": 79,
+            "dst": 114,
+            "weight": 1
+        },
+        {
+            "src": 79,
+            "dst": 88,
+            "weight": 1
+        },
+        {
+            "src": 79,
+            "dst": 93,
+            "weight": 1
+        },
+        {
+            "src": 79,
+            "dst": 94,
+            "weight": 1
+        },
+        {
+            "src": 80,
+            "dst": 135,
+            "weight": 1
+        },
+        {
+            "src": 81,
+            "dst": 89,
+            "weight": 1
+        },
+        {
+            "src": 82,
+            "dst": 152,
+            "weight": 1
+        },
+        {
+            "src": 83,
+            "dst": 126,
+            "weight": 1
+        },
+        {
+            "src": 85,
+            "dst": 139,
+            "weight": 1
+        },
+        {
+            "src": 87,
+            "dst": 105,
+            "weight": 1
+        },
+        {
+            "src": 87,
+            "dst": 148,
+            "weight": 1
+        },
+        {
+            "src": 88,
+            "dst": 114,
+            "weight": 1
+        },
+        {
+            "src": 88,
+            "dst": 93,
+            "weight": 1
+        },
+        {
+            "src": 88,
+            "dst": 94,
+            "weight": 1
+        },
+        {
+            "src": 89,
+            "dst": 147,
+            "weight": 2
+        },
+        {
+            "src": 90,
+            "dst": 154,
+            "weight": 1
+        },
+        {
+            "src": 91,
+            "dst": 159,
+            "weight": 1
+        },
+        {
+            "src": 93,
+            "dst": 114,
+            "weight": 1
+        },
+        {
+            "src": 93,
+            "dst": 94,
+            "weight": 1
+        },
+        {
+            "src": 94,
+            "dst": 114,
+            "weight": 1
+        },
+        {
+            "src": 95,
+            "dst": 125,
+            "weight": 2
+        },
+        {
+            "src": 97,
+            "dst": 101,
+            "weight": 1
+        },
+        {
+            "src": 98,
+            "dst": 136,
+            "weight": 1
+        },
+        {
+            "src": 100,
+            "dst": 105,
+            "weight": 1
+        },
+        {
+            "src": 102,
+            "dst": 154,
+            "weight": 1
+        },
+        {
+            "src": 105,
+            "dst": 121,
+            "weight": 1
+        },
+        {
+            "src": 105,
+            "dst": 154,
+            "weight": 1
+        },
+        {
+            "src": 105,
+            "dst": 117,
+            "weight": 1
+        },
+        {
+            "src": 105,
+            "dst": 118,
+            "weight": 2
+        },
+        {
+            "src": 105,
+            "dst": 148,
+            "weight": 1
+        },
+        {
+            "src": 105,
+            "dst": 131,
+            "weight": 1
+        },
+        {
+            "src": 105,
+            "dst": 108,
+            "weight": 1
+        },
+        {
+            "src": 105,
+            "dst": 136,
+            "weight": 1
+        },
+        {
+            "src": 107,
+            "dst": 139,
+            "weight": 1
+        },
+        {
+            "src": 107,
+            "dst": 136,
+            "weight": 1
+        },
+        {
+            "src": 108,
+            "dst": 118,
+            "weight": 1
+        },
+        {
+            "src": 110,
+            "dst": 141,
+            "weight": 1
+        },
+        {
+            "src": 110,
+            "dst": 116,
+            "weight": 1
+        },
+        {
+            "src": 110,
+            "dst": 118,
+            "weight": 1
+        },
+        {
+            "src": 111,
+            "dst": 162,
+            "weight": 2
+        },
+        {
+            "src": 111,
+            "dst": 134,
+            "weight": 2
+        },
+        {
+            "src": 111,
+            "dst": 129,
+            "weight": 2
+        },
+        {
+            "src": 111,
+            "dst": 161,
+            "weight": 1
+        },
+        {
+            "src": 112,
+            "dst": 134,
+            "weight": 1
+        },
+        {
+            "src": 113,
+            "dst": 119,
+            "weight": 1
+        },
+        {
+            "src": 115,
+            "dst": 124,
+            "weight": 1
+        },
+        {
+            "src": 115,
+            "dst": 122,
+            "weight": 1
+        },
+        {
+            "src": 115,
+            "dst": 120,
+            "weight": 1
+        },
+        {
+            "src": 116,
+            "dst": 154,
+            "weight": 1
+        },
+        {
+            "src": 116,
+            "dst": 141,
+            "weight": 1
+        },
+        {
+            "src": 116,
+            "dst": 118,
+            "weight": 1
+        },
+        {
+            "src": 117,
+            "dst": 154,
+            "weight": 1
+        },
+        {
+            "src": 118,
+            "dst": 141,
+            "weight": 1
+        },
+        {
+            "src": 120,
+            "dst": 124,
+            "weight": 1
+        },
+        {
+            "src": 120,
+            "dst": 122,
+            "weight": 1
+        },
+        {
+            "src": 122,
+            "dst": 124,
+            "weight": 1
+        },
+        {
+            "src": 128,
+            "dst": 154,
+            "weight": 1
+        },
+        {
+            "src": 129,
+            "dst": 162,
+            "weight": 2
+        },
+        {
+            "src": 129,
+            "dst": 134,
+            "weight": 2
+        },
+        {
+            "src": 129,
+            "dst": 161,
+            "weight": 1
+        },
+        {
+            "src": 132,
+            "dst": 157,
+            "weight": 1
+        },
+        {
+            "src": 132,
+            "dst": 156,
+            "weight": 1
+        },
+        {
+            "src": 132,
+            "dst": 134,
+            "weight": 1
+        },
+        {
+            "src": 132,
+            "dst": 145,
+            "weight": 1
+        },
+        {
+            "src": 134,
+            "dst": 162,
+            "weight": 2
+        },
+        {
+            "src": 134,
+            "dst": 161,
+            "weight": 1
+        },
+        {
+            "src": 134,
+            "dst": 157,
+            "weight": 1
+        },
+        {
+            "src": 134,
+            "dst": 156,
+            "weight": 1
+        },
+        {
+            "src": 134,
+            "dst": 145,
+            "weight": 1
+        },
+        {
+            "src": 136,
+            "dst": 139,
+            "weight": 1
+        },
+        {
+            "src": 145,
+            "dst": 157,
+            "weight": 1
+        },
+        {
+            "src": 145,
+            "dst": 156,
+            "weight": 1
+        },
+        {
+            "src": 156,
+            "dst": 157,
+            "weight": 1
+        },
+        {
+            "src": 161,
+            "dst": 162,
+            "weight": 1
+        }
+    ]
+}
