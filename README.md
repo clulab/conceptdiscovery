@@ -98,3 +98,88 @@ The JSON output format looks like this:
 }, ... ]
 
 ```
+
+
+## Load graph from JSON and run TextRank
+
+We also add the functionanlity that allows user to load the existed concepts graph and get the ranking.
+
+You can try the sample App:
+```
+ sbt 'runMain org.clulab.concepts.apps.GraphRankingApp sample_graph.json'
+```
+
+The input format is as following:
+```
+{
+  "nodes": [
+    {
+      "id": "0",
+      "text": "node1"
+    },
+    {
+      "id": "1",
+      "text": "node2"
+    },
+    {
+      "id": "2",
+      "text": "node3"
+    },
+    {
+      "id": "3",
+      "text": "node4"
+    }
+  ],
+  "edges": [
+    {
+      "src": "0",
+      "dst": "1",
+      "weight": 1
+    },
+    {
+      "src": "0",
+      "dst": "2",
+      "weight": 1
+    },
+    {
+      "src": "1",
+      "dst": "2",
+      "weight": 1
+    },
+    {
+      "src": "2",
+      "dst": "3",
+      "weight": 1
+    }
+  ]
+}
+```
+
+And the output is similar to the concept discovery output:
+```
+[ {
+  "concept" : {
+    "text" : "node3",
+    "id" : "2"
+  },
+  "saliency" : 0.3667096488104522
+}, {
+  "concept" : {
+    "text" : "node1",
+    "id" : "0"
+  },
+  "saliency" : 0.2459349312644232
+}, {
+  "concept" : {
+    "text" : "node2",
+    "id" : "1"
+  },
+  "saliency" : 0.2459349312644232
+}, {
+  "concept" : {
+    "text" : "node4",
+    "id" : "3"
+  },
+  "saliency" : 0.14142048866070128
+} ]
+```
