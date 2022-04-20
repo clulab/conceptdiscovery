@@ -232,8 +232,14 @@ object ConceptDiscoverer {
     val parsed = JSON.parseFull(jsonString)
     val nodes = parsed.get.asInstanceOf[Map[String, Any]]("nodes").asInstanceOf[List[Any]]
     val edges = parsed.get.asInstanceOf[Map[String, Any]]("edges").asInstanceOf[List[Any]]
+    val directed = parsed.get.asInstanceOf[Map[String, Any]]("directed").asInstanceOf[Boolean]
     // construct graph from concepts
-    val g = new SimpleWeightedGraph[String, DefaultEdge](classOf[DefaultEdge])
+    if (directed){
+      val g = new SimpleDirectedWeightedGraph[String, DefaultEdge](classOf[DefaultEdge])
+    }else{
+      val g = new SimpleWeightedGraph[String, DefaultEdge](classOf[DefaultEdge])
+    }
+    val g =  if (directed) {new SimpleDirectedWeightedGraph[String, DefaultEdge](classOf[DefaultEdge])} else  {new SimpleWeightedGraph[String, DefaultEdge](classOf[DefaultEdge])}
     for (node <- nodes) {
       // add (internally library handles not adding if already there)
       g.addVertex(node.asInstanceOf[Map[String, String]]("text"))
@@ -245,8 +251,14 @@ object ConceptDiscoverer {
       val weight = edge.asInstanceOf[Map[String, Double]]("weight")
       val src = node_map(edge.asInstanceOf[Map[String, String]]("src"))
       val dst = node_map(edge.asInstanceOf[Map[String, String]]("dst"))
-      val e = g.addEdge(src, dst)
-      g.setEdgeWeight(e, weight)
+      if (!g.containsEdge(src,dst)){
+        val e = g.addEdge(src, dst)
+        g.setEdgeWeight(e, weight)
+      }else if (g.containsEdge(src,dst)){
+        // If there are multiple edges between two nodes, we add the two edge weights up as the new weight
+        val e = g.getEdge(src,dst)
+        g.setEdgeWeight(e, weight + g.getEdgeWeight(e))
+      }
     }
 
     val pr = new PageRank(g)
