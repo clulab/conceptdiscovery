@@ -112,6 +112,7 @@ You can try the sample App:
 The input format is as following:
 ```
 {
+  "directed": true,
   "nodes": [
     {
       "id": "0",
@@ -154,6 +155,7 @@ The input format is as following:
   ]
 }
 ```
+The `directed` indicates if you want to use a directed graph or not. If you decide to use directed graph, the program will connect the edges from `src` to `dst` in a directed way. Else, the program will read the edges in an undirected way. If there are multiple edges between two nodes in the undirected setting, we add the two edge weights up as the new weight.
 
 And the output is similar to the concept discovery output:
 ```
